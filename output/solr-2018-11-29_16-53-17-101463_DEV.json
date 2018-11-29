@@ -1,0 +1,120 @@
+{
+    "averagesRealTime": [
+        0.01970166666666667,
+        0.010673,
+        0.011205,
+        0.010533333333333334
+    ],
+    "averagesSolrQTime": [
+        7.333333333333333,
+        0.3333333333333333,
+        1.0,
+        0.6666666666666666
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:17.101670",
+                "numFound": 1787,
+                "phrase": "nose seem eye clock felt",
+                "realTime": 0.023555,
+                "solrQTime": 9
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:17.207632",
+                "numFound": 1787,
+                "phrase": "nose seem eye clock felt",
+                "realTime": 0.009462,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:17.281512",
+                "numFound": 1787,
+                "phrase": "nose seem eye clock felt",
+                "realTime": 0.010063,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:17.353684",
+                "numFound": 1787,
+                "phrase": "nose seem eye clock felt",
+                "realTime": 0.011252,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:17.424665",
+                "numFound": 1742,
+                "phrase": "captain lie land seed less",
+                "realTime": 0.019511,
+                "solrQTime": 6
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:17.510339",
+                "numFound": 1742,
+                "phrase": "captain lie land seed less",
+                "realTime": 0.0113,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:17.585912",
+                "numFound": 1742,
+                "phrase": "captain lie land seed less",
+                "realTime": 0.010709,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:17.654975",
+                "numFound": 1742,
+                "phrase": "captain lie land seed less",
+                "realTime": 0.01024,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:17.722569",
+                "numFound": 1735,
+                "phrase": "floor print tiny electric dad",
+                "realTime": 0.016039,
+                "solrQTime": 7
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:17.798219",
+                "numFound": 1735,
+                "phrase": "floor print tiny electric dad",
+                "realTime": 0.011257,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:17.871509",
+                "numFound": 1735,
+                "phrase": "floor print tiny electric dad",
+                "realTime": 0.012843,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:17.946834",
+                "numFound": 1735,
+                "phrase": "floor print tiny electric dad",
+                "realTime": 0.010108,
+                "solrQTime": 0
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 1754.6666666666667,
+        "max": 1787,
+        "min": 1735
+    },
+    "summary": {
+        "1st (unique) time avg": 7.333333333333333,
+        "last (cached) time avg": 0.6666666666666666,
+        "numFound ave": 1754.6666666666667,
+        "numFound max": 1787,
+        "numFound min": 1735,
+        "test end time": "2018-11-29 16:53:18.026000",
+        "test start time": "2018-11-29 16:53:17.101463"
+    }
+}

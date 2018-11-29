@@ -1,0 +1,120 @@
+{
+    "averagesRealTime": [
+        0.059761,
+        0.012967666666666669,
+        0.012666000000000002,
+        0.012854333333333334
+    ],
+    "averagesSolrQTime": [
+        40.666666666666664,
+        1.3333333333333333,
+        1.6666666666666667,
+        1.6666666666666667
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:05.672715",
+                "numFound": 17852,
+                "phrase": "little field about operate smile",
+                "realTime": 0.072385,
+                "solrQTime": 45
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:05.902212",
+                "numFound": 17852,
+                "phrase": "little field about operate smile",
+                "realTime": 0.013348,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:06.060576",
+                "numFound": 17852,
+                "phrase": "little field about operate smile",
+                "realTime": 0.012848,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:06.258845",
+                "numFound": 17852,
+                "phrase": "little field about operate smile",
+                "realTime": 0.014784,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:06.423210",
+                "numFound": 21869,
+                "phrase": "food build live letter thing",
+                "realTime": 0.06918,
+                "solrQTime": 51
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:06.644921",
+                "numFound": 21869,
+                "phrase": "food build live letter thing",
+                "realTime": 0.010814,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:06.800547",
+                "numFound": 21869,
+                "phrase": "food build live letter thing",
+                "realTime": 0.011884,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:06.948040",
+                "numFound": 21869,
+                "phrase": "food build live letter thing",
+                "realTime": 0.011775,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:07.097342",
+                "numFound": 7451,
+                "phrase": "green race ten engine spend",
+                "realTime": 0.037718,
+                "solrQTime": 26
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:07.232308",
+                "numFound": 7451,
+                "phrase": "green race ten engine spend",
+                "realTime": 0.014741,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:07.350922",
+                "numFound": 7451,
+                "phrase": "green race ten engine spend",
+                "realTime": 0.013266,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:07.465517",
+                "numFound": 7451,
+                "phrase": "green race ten engine spend",
+                "realTime": 0.012004,
+                "solrQTime": 2
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 15724.0,
+        "max": 21869,
+        "min": 7451
+    },
+    "summary": {
+        "1st (unique) time avg": 40.666666666666664,
+        "last (cached) time avg": 1.6666666666666667,
+        "numFound ave": 15724.0,
+        "numFound max": 21869,
+        "numFound min": 7451,
+        "test end time": "2018-11-29 16:53:07.578057",
+        "test start time": "2018-11-29 16:53:05.672353"
+    }
+}

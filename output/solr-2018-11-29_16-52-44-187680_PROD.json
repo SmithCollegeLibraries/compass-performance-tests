@@ -1,0 +1,120 @@
+{
+    "averagesRealTime": [
+        0.029735333333333336,
+        0.011177,
+        0.013021,
+        0.010841000000000002
+    ],
+    "averagesSolrQTime": [
+        19.0,
+        1.0,
+        1.6666666666666667,
+        1.0
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2018-11-29 16:52:44.187996",
+                "numFound": 17361,
+                "phrase": "favor garden mean serve long",
+                "realTime": 0.028263,
+                "solrQTime": 17
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:44.351457",
+                "numFound": 17361,
+                "phrase": "favor garden mean serve long",
+                "realTime": 0.010119,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:44.473494",
+                "numFound": 17361,
+                "phrase": "favor garden mean serve long",
+                "realTime": 0.011995,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:44.604130",
+                "numFound": 17361,
+                "phrase": "favor garden mean serve long",
+                "realTime": 0.010221,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:52:44.742145",
+                "numFound": 16032,
+                "phrase": "bar rain main own came",
+                "realTime": 0.027061,
+                "solrQTime": 16
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:44.868737",
+                "numFound": 16032,
+                "phrase": "bar rain main own came",
+                "realTime": 0.011841,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:44.973221",
+                "numFound": 16032,
+                "phrase": "bar rain main own came",
+                "realTime": 0.010046,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:45.078783",
+                "numFound": 16032,
+                "phrase": "bar rain main own came",
+                "realTime": 0.011088,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:52:45.184622",
+                "numFound": 22130,
+                "phrase": "would forward appear might add",
+                "realTime": 0.033882,
+                "solrQTime": 24
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:45.327727",
+                "numFound": 22130,
+                "phrase": "would forward appear might add",
+                "realTime": 0.011571,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:45.451346",
+                "numFound": 22130,
+                "phrase": "would forward appear might add",
+                "realTime": 0.017022,
+                "solrQTime": 3
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:45.577218",
+                "numFound": 22130,
+                "phrase": "would forward appear might add",
+                "realTime": 0.011214,
+                "solrQTime": 1
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 18507.666666666668,
+        "max": 22130,
+        "min": 16032
+    },
+    "summary": {
+        "1st (unique) time avg": 19.0,
+        "last (cached) time avg": 1.0,
+        "numFound ave": 18507.666666666668,
+        "numFound max": 22130,
+        "numFound min": 16032,
+        "test end time": "2018-11-29 16:52:45.708817",
+        "test start time": "2018-11-29 16:52:44.187680"
+    }
+}

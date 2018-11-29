@@ -1,0 +1,120 @@
+{
+    "averagesRealTime": [
+        0.031760000000000004,
+        0.010846,
+        0.010802333333333332,
+        0.012006666666666665
+    ],
+    "averagesSolrQTime": [
+        21.333333333333332,
+        0.6666666666666666,
+        0.6666666666666666,
+        1.0
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2018-11-29 16:52:46.798346",
+                "numFound": 21381,
+                "phrase": "should show poor sure contain",
+                "realTime": 0.030467,
+                "solrQTime": 17
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:47.048099",
+                "numFound": 21381,
+                "phrase": "should show poor sure contain",
+                "realTime": 0.01174,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:47.255691",
+                "numFound": 21381,
+                "phrase": "should show poor sure contain",
+                "realTime": 0.010205,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:47.460633",
+                "numFound": 21381,
+                "phrase": "should show poor sure contain",
+                "realTime": 0.011014,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:52:47.673491",
+                "numFound": 16442,
+                "phrase": "turn seat spread week son",
+                "realTime": 0.025545,
+                "solrQTime": 17
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:47.793352",
+                "numFound": 16442,
+                "phrase": "turn seat spread week son",
+                "realTime": 0.011172,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:47.888869",
+                "numFound": 16442,
+                "phrase": "turn seat spread week son",
+                "realTime": 0.01183,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:47.985889",
+                "numFound": 16442,
+                "phrase": "turn seat spread week son",
+                "realTime": 0.01283,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:52:48.086826",
+                "numFound": 78607,
+                "phrase": "call should rail friend page",
+                "realTime": 0.039268,
+                "solrQTime": 30
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:48.253539",
+                "numFound": 78607,
+                "phrase": "call should rail friend page",
+                "realTime": 0.009626,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:48.393306",
+                "numFound": 78607,
+                "phrase": "call should rail friend page",
+                "realTime": 0.010372,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:48.536309",
+                "numFound": 78607,
+                "phrase": "call should rail friend page",
+                "realTime": 0.012176,
+                "solrQTime": 1
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 38810.0,
+        "max": 78607,
+        "min": 16442
+    },
+    "summary": {
+        "1st (unique) time avg": 21.333333333333332,
+        "last (cached) time avg": 1.0,
+        "numFound ave": 38810.0,
+        "numFound max": 78607,
+        "numFound min": 16442,
+        "test end time": "2018-11-29 16:52:48.682915",
+        "test start time": "2018-11-29 16:52:46.798143"
+    }
+}

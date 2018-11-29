@@ -1,4 +1,14 @@
-"""Assumption: the astronomically low probably of a repeat (1 out of 5^975)
+description = """This tool is for testing the performance of Solr.
+
+Queries Solr with a random phrase of English words and records the response
+times. Queries several times to make an average number. Also repeats query
+to compare unique vs cached query times.
+
+Note: if Solr has been dormant for a while it will be slow to respond at first.
+This test should be run several times to determine "start up" performance vs
+"warmed up" performance.
+
+Assumptions: the astronomically low probably of a repeat (1 out of 5^975)
 renders the random phrases virtually unique.
 """
 import logging
@@ -14,6 +24,8 @@ from datasets import commonEnglishWordS
 import urllib
 import requests
 import datetime
+import json
+
 import argparse
 import configparser
 logging.basicConfig(level=logging.INFO)
@@ -21,16 +33,14 @@ logging.getLogger("requests").setLevel(logging.WARNING)
 
 import pprint
 
-
-
 CONFIGFILE = "compass.cfg"
 
-NUM_UNIQUE_CHECKS = 30
+NUM_UNIQUE_CHECKS = 3
 NUM_REPEAT_CHECKS = 4
 
 PLACES = 5
 
-argparser = argparse.ArgumentParser()
+argparser = argparse.ArgumentParser(description=description)
 argparser.add_argument("SERVERCFG", default="PROD", help="Name of the server configuration section e.g. 'PROD' or 'STAGE'. Edit compass.cfg to add a server configuration section.")
 cliArguments = argparser.parse_args()
 
@@ -81,6 +91,8 @@ def doCheck(solrRequest):
     reportData["solrQTime"] = response.json()["responseHeader"]["QTime"]
     logging.debug(response.elapsed.total_seconds())
     reportData["realTime"] = response.elapsed.total_seconds()
+    logging.debug(response.json()["response"]["numFound"])
+    reportData["numFound"] = response.json()["response"]["numFound"]
     return reportData
 
 FINAL_REPORT["data"] = []
@@ -102,23 +114,42 @@ FINAL_REPORT["summary"]["test end time"] = datetime.datetime.now()
 
 # -- Generate summary report --
 # Average times of 1st hit (both Solr "Qtime" and real time)
-def getAverageTime(data, index, type):
+def getAverage(data, index, type):
     sum = 0
     for queryResponses in data:
         sum = sum + queryResponses[index][type]
     average = sum/NUM_UNIQUE_CHECKS
     return average
 
+def getMaxMin(data, index, type):
+    myList = []
+    for queryResponses in data:
+        myList.append(queryResponses[index][type])
+    return {'max': max(myList), 'min': min(myList)}
+
 FINAL_REPORT["averagesRealTime"] = []
 FINAL_REPORT["averagesSolrQTime"] = []
 
+# Get average load times for 1st and last repeat query
 for i in range(NUM_REPEAT_CHECKS):
-    FINAL_REPORT["averagesRealTime"].append(getAverageTime(FINAL_REPORT["data"], i, 'realTime'))
-    FINAL_REPORT["averagesSolrQTime"].append(getAverageTime(FINAL_REPORT["data"], i, 'solrQTime'))
+    FINAL_REPORT["averagesRealTime"].append(getAverage(FINAL_REPORT["data"], i, 'realTime'))
+    FINAL_REPORT["averagesSolrQTime"].append(getAverage(FINAL_REPORT["data"], i, 'solrQTime'))
+
+# Get average number of search results
+FINAL_REPORT["numFound"] = getMaxMin(FINAL_REPORT["data"], 0, 'numFound')
+FINAL_REPORT["numFound"]["average"] = getAverage(FINAL_REPORT["data"], 0, 'numFound')
+# Report out max, min, and average number of results
+FINAL_REPORT["summary"]["numFound max"] = FINAL_REPORT["numFound"]['max']
+FINAL_REPORT["summary"]["numFound min"] = FINAL_REPORT["numFound"]['min']
+FINAL_REPORT["summary"]["numFound ave"] = FINAL_REPORT["numFound"]['average']
 
 # Average times of last hit (both Solr "Qtime" and real time)
+FINAL_REPORT["summary"]["1st (unique) time avg"] = FINAL_REPORT["averagesSolrQTime"][0]
+FINAL_REPORT["summary"]["last (cached) time avg"] = FINAL_REPORT["averagesSolrQTime"][-1]
 
-FINAL_REPORT["summary"]["1st time avg"] = FINAL_REPORT["averagesSolrQTime"][0]
-FINAL_REPORT["summary"]["last time avg"] = FINAL_REPORT["averagesSolrQTime"][-1]
 
 pprint.pprint(FINAL_REPORT["summary"])
+
+outputFilename = 'solr-' + FINAL_REPORT["summary"]["test start time"].strftime("%Y-%m-%d_%H-%M-%S-%f") + '_' + cliArguments.SERVERCFG.strip() + ".json"
+with open('output/' + outputFilename, 'w') as fp:
+    json.dump(FINAL_REPORT, fp, indent=4, sort_keys=True, default=str)

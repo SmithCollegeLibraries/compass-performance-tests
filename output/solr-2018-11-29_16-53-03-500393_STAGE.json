@@ -1,0 +1,120 @@
+{
+    "averagesRealTime": [
+        0.04984566666666667,
+        0.013535333333333335,
+        0.012387333333333334,
+        0.011894000000000002
+    ],
+    "averagesSolrQTime": [
+        35.0,
+        1.3333333333333333,
+        1.6666666666666667,
+        1.3333333333333333
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:03.500825",
+                "numFound": 102694,
+                "phrase": "was game red fig system",
+                "realTime": 0.070158,
+                "solrQTime": 51
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:03.679313",
+                "numFound": 102694,
+                "phrase": "was game red fig system",
+                "realTime": 0.013989,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:03.749061",
+                "numFound": 102694,
+                "phrase": "was game red fig system",
+                "realTime": 0.012741,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:03.823671",
+                "numFound": 102694,
+                "phrase": "was game red fig system",
+                "realTime": 0.011915,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:03.889939",
+                "numFound": 12673,
+                "phrase": "serve pretty bread event name",
+                "realTime": 0.038703,
+                "solrQTime": 28
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:03.988975",
+                "numFound": 12673,
+                "phrase": "serve pretty bread event name",
+                "realTime": 0.013439,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:04.060479",
+                "numFound": 12673,
+                "phrase": "serve pretty bread event name",
+                "realTime": 0.012167,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:04.140079",
+                "numFound": 12673,
+                "phrase": "serve pretty bread event name",
+                "realTime": 0.011338,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:04.210617",
+                "numFound": 11854,
+                "phrase": "feet came after cow answer",
+                "realTime": 0.040676,
+                "solrQTime": 26
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:04.383495",
+                "numFound": 11854,
+                "phrase": "feet came after cow answer",
+                "realTime": 0.013178,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:04.493622",
+                "numFound": 11854,
+                "phrase": "feet came after cow answer",
+                "realTime": 0.012254,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:04.604454",
+                "numFound": 11854,
+                "phrase": "feet came after cow answer",
+                "realTime": 0.012429,
+                "solrQTime": 2
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 42407.0,
+        "max": 102694,
+        "min": 11854
+    },
+    "summary": {
+        "1st (unique) time avg": 35.0,
+        "last (cached) time avg": 1.3333333333333333,
+        "numFound ave": 42407.0,
+        "numFound max": 102694,
+        "numFound min": 11854,
+        "test end time": "2018-11-29 16:53:04.708409",
+        "test start time": "2018-11-29 16:53:03.500393"
+    }
+}

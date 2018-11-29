@@ -1,0 +1,120 @@
+{
+    "averagesRealTime": [
+        0.019047666666666668,
+        0.010886333333333333,
+        0.010880333333333332,
+        0.011122666666666668
+    ],
+    "averagesSolrQTime": [
+        7.333333333333333,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.3333333333333333
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:20.953141",
+                "numFound": 1868,
+                "phrase": "lie does will tie safe",
+                "realTime": 0.018442,
+                "solrQTime": 5
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:21.096756",
+                "numFound": 1868,
+                "phrase": "lie does will tie safe",
+                "realTime": 0.012181,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:21.212673",
+                "numFound": 1868,
+                "phrase": "lie does will tie safe",
+                "realTime": 0.011843,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:21.330251",
+                "numFound": 1868,
+                "phrase": "lie does will tie safe",
+                "realTime": 0.012388,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:21.443768",
+                "numFound": 2524,
+                "phrase": "milk arm require much develop",
+                "realTime": 0.020792,
+                "solrQTime": 10
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:21.536563",
+                "numFound": 2524,
+                "phrase": "milk arm require much develop",
+                "realTime": 0.009514,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:21.616879",
+                "numFound": 2524,
+                "phrase": "milk arm require much develop",
+                "realTime": 0.009732,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:21.694548",
+                "numFound": 2524,
+                "phrase": "milk arm require much develop",
+                "realTime": 0.011696,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:21.772835",
+                "numFound": 2353,
+                "phrase": "cry nation deal gun fat",
+                "realTime": 0.017909,
+                "solrQTime": 7
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:21.873268",
+                "numFound": 2353,
+                "phrase": "cry nation deal gun fat",
+                "realTime": 0.010964,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:21.960745",
+                "numFound": 2353,
+                "phrase": "cry nation deal gun fat",
+                "realTime": 0.011066,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:22.055574",
+                "numFound": 2353,
+                "phrase": "cry nation deal gun fat",
+                "realTime": 0.009284,
+                "solrQTime": 0
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 2248.3333333333335,
+        "max": 2524,
+        "min": 1868
+    },
+    "summary": {
+        "1st (unique) time avg": 7.333333333333333,
+        "last (cached) time avg": 0.3333333333333333,
+        "numFound ave": 2248.3333333333335,
+        "numFound max": 2524,
+        "numFound min": 1868,
+        "test end time": "2018-11-29 16:53:22.141510",
+        "test start time": "2018-11-29 16:53:20.952712"
+    }
+}

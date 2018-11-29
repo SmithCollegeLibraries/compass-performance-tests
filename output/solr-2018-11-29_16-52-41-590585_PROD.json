@@ -1,0 +1,120 @@
+{
+    "averagesRealTime": [
+        0.026655,
+        0.010468,
+        0.012419333333333333,
+        0.010666333333333333
+    ],
+    "averagesSolrQTime": [
+        14.666666666666666,
+        0.6666666666666666,
+        1.3333333333333333,
+        0.6666666666666666
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2018-11-29 16:52:41.590799",
+                "numFound": 10306,
+                "phrase": "camp meant syllable million cent",
+                "realTime": 0.033799,
+                "solrQTime": 18
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:41.725197",
+                "numFound": 10306,
+                "phrase": "camp meant syllable million cent",
+                "realTime": 0.009632,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:41.828925",
+                "numFound": 10306,
+                "phrase": "camp meant syllable million cent",
+                "realTime": 0.012339,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:41.936855",
+                "numFound": 10306,
+                "phrase": "camp meant syllable million cent",
+                "realTime": 0.011832,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:52:42.054612",
+                "numFound": 13598,
+                "phrase": "begin why neck invent mark",
+                "realTime": 0.020788,
+                "solrQTime": 12
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:42.170150",
+                "numFound": 13598,
+                "phrase": "begin why neck invent mark",
+                "realTime": 0.010148,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:42.263324",
+                "numFound": 13598,
+                "phrase": "begin why neck invent mark",
+                "realTime": 0.012028,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:42.362568",
+                "numFound": 13598,
+                "phrase": "begin why neck invent mark",
+                "realTime": 0.010284,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:52:42.461213",
+                "numFound": 10830,
+                "phrase": "twenty fill knew dance capital",
+                "realTime": 0.025378,
+                "solrQTime": 14
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:42.617554",
+                "numFound": 10830,
+                "phrase": "twenty fill knew dance capital",
+                "realTime": 0.011624,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:42.762579",
+                "numFound": 10830,
+                "phrase": "twenty fill knew dance capital",
+                "realTime": 0.012891,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:42.906667",
+                "numFound": 10830,
+                "phrase": "twenty fill knew dance capital",
+                "realTime": 0.009883,
+                "solrQTime": 1
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 11578.0,
+        "max": 13598,
+        "min": 10306
+    },
+    "summary": {
+        "1st (unique) time avg": 14.666666666666666,
+        "last (cached) time avg": 0.6666666666666666,
+        "numFound ave": 11578.0,
+        "numFound max": 13598,
+        "numFound min": 10306,
+        "test end time": "2018-11-29 16:52:43.050757",
+        "test start time": "2018-11-29 16:52:41.590585"
+    }
+}

@@ -1,0 +1,120 @@
+{
+    "averagesRealTime": [
+        0.030116999999999994,
+        0.011730333333333334,
+        0.010560333333333333,
+        0.009655333333333333
+    ],
+    "averagesSolrQTime": [
+        14.666666666666666,
+        1.0,
+        1.0,
+        0.3333333333333333
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2018-11-29 16:52:38.747071",
+                "numFound": 15108,
+                "phrase": "particular box tire brought leave",
+                "realTime": 0.032452,
+                "solrQTime": 15
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:38.941568",
+                "numFound": 15108,
+                "phrase": "particular box tire brought leave",
+                "realTime": 0.012802,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:39.070760",
+                "numFound": 15108,
+                "phrase": "particular box tire brought leave",
+                "realTime": 0.010385,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:39.191699",
+                "numFound": 15108,
+                "phrase": "particular box tire brought leave",
+                "realTime": 0.01098,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:52:39.315655",
+                "numFound": 37191,
+                "phrase": "half safe year one chart",
+                "realTime": 0.035702,
+                "solrQTime": 18
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:39.575941",
+                "numFound": 37191,
+                "phrase": "half safe year one chart",
+                "realTime": 0.011671,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:39.805911",
+                "numFound": 37191,
+                "phrase": "half safe year one chart",
+                "realTime": 0.011054,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:40.026129",
+                "numFound": 37191,
+                "phrase": "half safe year one chart",
+                "realTime": 0.008348,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:52:40.243765",
+                "numFound": 10180,
+                "phrase": "favor early event beauty team",
+                "realTime": 0.022197,
+                "solrQTime": 11
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:40.355884",
+                "numFound": 10180,
+                "phrase": "favor early event beauty team",
+                "realTime": 0.010718,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:40.460224",
+                "numFound": 10180,
+                "phrase": "favor early event beauty team",
+                "realTime": 0.010242,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:52:40.565472",
+                "numFound": 10180,
+                "phrase": "favor early event beauty team",
+                "realTime": 0.009638,
+                "solrQTime": 0
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 20826.333333333332,
+        "max": 37191,
+        "min": 10180
+    },
+    "summary": {
+        "1st (unique) time avg": 14.666666666666666,
+        "last (cached) time avg": 0.3333333333333333,
+        "numFound ave": 20826.333333333332,
+        "numFound max": 37191,
+        "numFound min": 10180,
+        "test end time": "2018-11-29 16:52:40.674601",
+        "test start time": "2018-11-29 16:52:38.746779"
+    }
+}

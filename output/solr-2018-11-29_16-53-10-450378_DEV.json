@@ -1,0 +1,120 @@
+{
+    "averagesRealTime": [
+        0.021341,
+        0.012096666666666665,
+        0.011548000000000001,
+        0.012003
+    ],
+    "averagesSolrQTime": [
+        10.333333333333334,
+        1.3333333333333333,
+        1.0,
+        1.0
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:10.450587",
+                "numFound": 3033,
+                "phrase": "day division for free son",
+                "realTime": 0.02587,
+                "solrQTime": 13
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:10.553342",
+                "numFound": 3033,
+                "phrase": "day division for free son",
+                "realTime": 0.013005,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:10.618169",
+                "numFound": 3033,
+                "phrase": "day division for free son",
+                "realTime": 0.013613,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:10.692141",
+                "numFound": 3033,
+                "phrase": "day division for free son",
+                "realTime": 0.013087,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:10.758927",
+                "numFound": 2387,
+                "phrase": "well piece else plant house",
+                "realTime": 0.019889,
+                "solrQTime": 9
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:10.843527",
+                "numFound": 2387,
+                "phrase": "well piece else plant house",
+                "realTime": 0.012893,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:10.923987",
+                "numFound": 2387,
+                "phrase": "well piece else plant house",
+                "realTime": 0.010154,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:11.000151",
+                "numFound": 2387,
+                "phrase": "well piece else plant house",
+                "realTime": 0.011662,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-29 16:53:11.074413",
+                "numFound": 1724,
+                "phrase": "remember such done wave whether",
+                "realTime": 0.018264,
+                "solrQTime": 9
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:11.178694",
+                "numFound": 1724,
+                "phrase": "remember such done wave whether",
+                "realTime": 0.010392,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:11.280351",
+                "numFound": 1724,
+                "phrase": "remember such done wave whether",
+                "realTime": 0.010877,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-29 16:53:11.367364",
+                "numFound": 1724,
+                "phrase": "remember such done wave whether",
+                "realTime": 0.01126,
+                "solrQTime": 1
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 2381.3333333333335,
+        "max": 3033,
+        "min": 1724
+    },
+    "summary": {
+        "1st (unique) time avg": 10.333333333333334,
+        "last (cached) time avg": 1.0,
+        "numFound ave": 2381.3333333333335,
+        "numFound max": 3033,
+        "numFound min": 1724,
+        "test end time": "2018-11-29 16:53:11.460321",
+        "test start time": "2018-11-29 16:53:10.450378"
+    }
+}
