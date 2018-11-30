@@ -28,7 +28,7 @@ import json
 
 import argparse
 import configparser
-logging.basicConfig(level=logging.INFO)
+
 logging.getLogger("requests").setLevel(logging.WARNING)
 
 import pprint
@@ -41,8 +41,16 @@ NUM_REPEAT_CHECKS = 4
 PLACES = 5
 
 argparser = argparse.ArgumentParser(description=description)
+argparser.add_argument("--debug", action='store_true', help="Go into debug mode -- fewer unique queries, more verbosity, write to files labeled with 'DEBUG'")
+argparser.add_argument("--dry-run", action='store_true', help="Do not write out json report file")
 argparser.add_argument("SERVERCFG", default="PROD", help="Name of the server configuration section e.g. 'PROD' or 'STAGE'. Edit compass.cfg to add a server configuration section.")
 cliArguments = argparser.parse_args()
+
+if cliArguments.debug:
+    NUM_UNIQUE_CHECKS = 3
+    logging.basicConfig(level=logging.DEBUG)
+else:
+    logging.basicConfig(level=logging.INFO)
 
 section = cliArguments.SERVERCFG
 configData = configparser.ConfigParser()
@@ -153,13 +161,14 @@ FINAL_REPORT["summary"]["environment"] = cliArguments.SERVERCFG
 FINAL_REPORT["summary"]["environment uri"] = solr_end_point
 
 
-
-
 pprint.pprint(FINAL_REPORT["summary"])
 
-outputFilename = 'solr-' + FINAL_REPORT["summary"]["test start time"].strftime("%Y-%m-%d_%H-%M-%S-%f") + '_' + cliArguments.SERVERCFG.strip() + ".json"
-outputFilenamePath = 'output/' + outputFilename
-with open(outputFilenamePath, 'w') as fp:
-    json.dump(FINAL_REPORT, fp, indent=4, sort_keys=True, default=str)
+if not cliArguments.dry_run:
+    outputFilename = 'solr-' + FINAL_REPORT["summary"]["test start time"].strftime("%Y-%m-%d_%H-%M-%S-%f") + '_' + cliArguments.SERVERCFG.strip() + ".json"
+    if cliArguments.debug:
+        outputFilename = "DEBUG-" + outputFilename
+    outputFilenamePath = 'output/' + outputFilename
+    with open(outputFilenamePath, 'w') as fp:
+        json.dump(FINAL_REPORT, fp, indent=4, sort_keys=True, default=str)
 
-logging.info("Data logged to %s" % outputFilenamePath)
+    logging.info("Data logged to %s" % outputFilenamePath)
