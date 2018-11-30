@@ -1,0 +1,932 @@
+{
+    "averagesRealTime": [
+        0.027935333333333333,
+        0.010408933333333335,
+        0.009840366666666666,
+        0.010311966666666667
+    ],
+    "averagesSolrQTime": [
+        18.666666666666668,
+        1.0333333333333334,
+        0.8333333333333334,
+        1.2
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:19.560695",
+                "numFound": 39977,
+                "phrase": "wrote one home cut teach",
+                "realTime": 0.041844,
+                "solrQTime": 31
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:19.723809",
+                "numFound": 39977,
+                "phrase": "wrote one home cut teach",
+                "realTime": 0.0108,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:19.832129",
+                "numFound": 39977,
+                "phrase": "wrote one home cut teach",
+                "realTime": 0.008327,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:19.943677",
+                "numFound": 39977,
+                "phrase": "wrote one home cut teach",
+                "realTime": 0.011052,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:20.062279",
+                "numFound": 14910,
+                "phrase": "seed school double plural multiply",
+                "realTime": 0.027426,
+                "solrQTime": 16
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:20.227249",
+                "numFound": 14910,
+                "phrase": "seed school double plural multiply",
+                "realTime": 0.010509,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:20.368218",
+                "numFound": 14910,
+                "phrase": "seed school double plural multiply",
+                "realTime": 0.008293,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:20.507121",
+                "numFound": 14910,
+                "phrase": "seed school double plural multiply",
+                "realTime": 0.010148,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:20.641452",
+                "numFound": 23163,
+                "phrase": "would close hundred noun hat",
+                "realTime": 0.021377,
+                "solrQTime": 12
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:20.749928",
+                "numFound": 23163,
+                "phrase": "would close hundred noun hat",
+                "realTime": 0.008848,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:20.846153",
+                "numFound": 23163,
+                "phrase": "would close hundred noun hat",
+                "realTime": 0.010095,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:20.944740",
+                "numFound": 23163,
+                "phrase": "would close hundred noun hat",
+                "realTime": 0.010424,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:21.042960",
+                "numFound": 14148,
+                "phrase": "represent main choose planet heavy",
+                "realTime": 0.032108,
+                "solrQTime": 24
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:21.148599",
+                "numFound": 14148,
+                "phrase": "represent main choose planet heavy",
+                "realTime": 0.009286,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:21.234746",
+                "numFound": 14148,
+                "phrase": "represent main choose planet heavy",
+                "realTime": 0.008357,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:21.314146",
+                "numFound": 14148,
+                "phrase": "represent main choose planet heavy",
+                "realTime": 0.008257,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:21.393791",
+                "numFound": 20719,
+                "phrase": "school love dance crowd whole",
+                "realTime": 0.022967,
+                "solrQTime": 14
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:21.567795",
+                "numFound": 20719,
+                "phrase": "school love dance crowd whole",
+                "realTime": 0.010026,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:21.718500",
+                "numFound": 20719,
+                "phrase": "school love dance crowd whole",
+                "realTime": 0.007827,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:21.864191",
+                "numFound": 20719,
+                "phrase": "school love dance crowd whole",
+                "realTime": 0.01026,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:22.020855",
+                "numFound": 14244,
+                "phrase": "fig move please engine spoke",
+                "realTime": 0.022963,
+                "solrQTime": 15
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:22.125330",
+                "numFound": 14244,
+                "phrase": "fig move please engine spoke",
+                "realTime": 0.011069,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:22.221173",
+                "numFound": 14244,
+                "phrase": "fig move please engine spoke",
+                "realTime": 0.011108,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:22.315201",
+                "numFound": 14244,
+                "phrase": "fig move please engine spoke",
+                "realTime": 0.009446,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:22.408103",
+                "numFound": 8938,
+                "phrase": "station are window care dog",
+                "realTime": 0.023956,
+                "solrQTime": 15
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:22.553624",
+                "numFound": 8938,
+                "phrase": "station are window care dog",
+                "realTime": 0.011041,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:22.693060",
+                "numFound": 8938,
+                "phrase": "station are window care dog",
+                "realTime": 0.010336,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:22.823074",
+                "numFound": 8938,
+                "phrase": "station are window care dog",
+                "realTime": 0.00957,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:22.954430",
+                "numFound": 8795,
+                "phrase": "print kept straight symbol lie",
+                "realTime": 0.027245,
+                "solrQTime": 19
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:23.051392",
+                "numFound": 8795,
+                "phrase": "print kept straight symbol lie",
+                "realTime": 0.010383,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:23.133325",
+                "numFound": 8795,
+                "phrase": "print kept straight symbol lie",
+                "realTime": 0.010884,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:23.219316",
+                "numFound": 8795,
+                "phrase": "print kept straight symbol lie",
+                "realTime": 0.009898,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:23.298748",
+                "numFound": 9334,
+                "phrase": "hill kept plane twenty element",
+                "realTime": 0.023779,
+                "solrQTime": 16
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:23.415845",
+                "numFound": 9334,
+                "phrase": "hill kept plane twenty element",
+                "realTime": 0.011303,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:23.518915",
+                "numFound": 9334,
+                "phrase": "hill kept plane twenty element",
+                "realTime": 0.011523,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:23.624474",
+                "numFound": 9334,
+                "phrase": "hill kept plane twenty element",
+                "realTime": 0.008895,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:23.723484",
+                "numFound": 20303,
+                "phrase": "move also design hair round",
+                "realTime": 0.029377,
+                "solrQTime": 21
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:23.886857",
+                "numFound": 20303,
+                "phrase": "move also design hair round",
+                "realTime": 0.008436,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:24.033648",
+                "numFound": 20303,
+                "phrase": "move also design hair round",
+                "realTime": 0.008911,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:24.176091",
+                "numFound": 20303,
+                "phrase": "move also design hair round",
+                "realTime": 0.010813,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:24.332858",
+                "numFound": 15791,
+                "phrase": "feel meat map money eat",
+                "realTime": 0.031117,
+                "solrQTime": 19
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:24.464090",
+                "numFound": 15791,
+                "phrase": "feel meat map money eat",
+                "realTime": 0.013463,
+                "solrQTime": 3
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:24.577401",
+                "numFound": 15791,
+                "phrase": "feel meat map money eat",
+                "realTime": 0.009005,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:24.684605",
+                "numFound": 15791,
+                "phrase": "feel meat map money eat",
+                "realTime": 0.009021,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:24.794296",
+                "numFound": 23498,
+                "phrase": "bit season develop out happy",
+                "realTime": 0.029919,
+                "solrQTime": 22
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:24.949569",
+                "numFound": 23498,
+                "phrase": "bit season develop out happy",
+                "realTime": 0.013494,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:25.103057",
+                "numFound": 23498,
+                "phrase": "bit season develop out happy",
+                "realTime": 0.011789,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:25.252994",
+                "numFound": 23498,
+                "phrase": "bit season develop out happy",
+                "realTime": 0.010567,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:25.390880",
+                "numFound": 25810,
+                "phrase": "shop again other flat grow",
+                "realTime": 0.033046,
+                "solrQTime": 25
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:25.529778",
+                "numFound": 25810,
+                "phrase": "shop again other flat grow",
+                "realTime": 0.013286,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:25.654599",
+                "numFound": 25810,
+                "phrase": "shop again other flat grow",
+                "realTime": 0.008914,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:25.776138",
+                "numFound": 25810,
+                "phrase": "shop again other flat grow",
+                "realTime": 0.01179,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:25.899049",
+                "numFound": 28917,
+                "phrase": "discuss glass pose might plan",
+                "realTime": 0.039429,
+                "solrQTime": 28
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:26.038550",
+                "numFound": 28917,
+                "phrase": "discuss glass pose might plan",
+                "realTime": 0.010597,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:26.136298",
+                "numFound": 28917,
+                "phrase": "discuss glass pose might plan",
+                "realTime": 0.009681,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:26.239936",
+                "numFound": 28917,
+                "phrase": "discuss glass pose might plan",
+                "realTime": 0.009566,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:26.341152",
+                "numFound": 29381,
+                "phrase": "straight certain see yard fast",
+                "realTime": 0.026123,
+                "solrQTime": 18
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:26.438778",
+                "numFound": 29381,
+                "phrase": "straight certain see yard fast",
+                "realTime": 0.010544,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:26.522368",
+                "numFound": 29381,
+                "phrase": "straight certain see yard fast",
+                "realTime": 0.009465,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:26.611027",
+                "numFound": 29381,
+                "phrase": "straight certain see yard fast",
+                "realTime": 0.008253,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:26.692724",
+                "numFound": 21242,
+                "phrase": "represent never expect fair send",
+                "realTime": 0.034821,
+                "solrQTime": 24
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:26.806952",
+                "numFound": 21242,
+                "phrase": "represent never expect fair send",
+                "realTime": 0.01185,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:26.901801",
+                "numFound": 21242,
+                "phrase": "represent never expect fair send",
+                "realTime": 0.011198,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:26.991072",
+                "numFound": 21242,
+                "phrase": "represent never expect fair send",
+                "realTime": 0.010619,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:27.077714",
+                "numFound": 15158,
+                "phrase": "method effect nature section wild",
+                "realTime": 0.02532,
+                "solrQTime": 17
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:27.255384",
+                "numFound": 15158,
+                "phrase": "method effect nature section wild",
+                "realTime": 0.009042,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:27.405744",
+                "numFound": 15158,
+                "phrase": "method effect nature section wild",
+                "realTime": 0.009499,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:27.569765",
+                "numFound": 15158,
+                "phrase": "method effect nature section wild",
+                "realTime": 0.010301,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:27.732548",
+                "numFound": 21509,
+                "phrase": "find less case scale many",
+                "realTime": 0.032673,
+                "solrQTime": 24
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:27.934914",
+                "numFound": 21509,
+                "phrase": "find less case scale many",
+                "realTime": 0.009237,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:28.115351",
+                "numFound": 21509,
+                "phrase": "find less case scale many",
+                "realTime": 0.009469,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:28.305851",
+                "numFound": 21509,
+                "phrase": "find less case scale many",
+                "realTime": 0.011332,
+                "solrQTime": 3
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:28.491029",
+                "numFound": 10238,
+                "phrase": "earth experiment rain nature consonant",
+                "realTime": 0.024286,
+                "solrQTime": 16
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:28.666452",
+                "numFound": 10238,
+                "phrase": "earth experiment rain nature consonant",
+                "realTime": 0.008005,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:28.823655",
+                "numFound": 10238,
+                "phrase": "earth experiment rain nature consonant",
+                "realTime": 0.01074,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:28.974242",
+                "numFound": 10238,
+                "phrase": "earth experiment rain nature consonant",
+                "realTime": 0.009685,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:29.129138",
+                "numFound": 35125,
+                "phrase": "pick grow reason whole use",
+                "realTime": 0.028521,
+                "solrQTime": 20
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:29.250148",
+                "numFound": 35125,
+                "phrase": "pick grow reason whole use",
+                "realTime": 0.009334,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:29.349907",
+                "numFound": 35125,
+                "phrase": "pick grow reason whole use",
+                "realTime": 0.008862,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:29.451320",
+                "numFound": 35125,
+                "phrase": "pick grow reason whole use",
+                "realTime": 0.011912,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:29.555725",
+                "numFound": 13855,
+                "phrase": "weather happen center seat whole",
+                "realTime": 0.02094,
+                "solrQTime": 13
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:29.626723",
+                "numFound": 13855,
+                "phrase": "weather happen center seat whole",
+                "realTime": 0.008847,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:29.679217",
+                "numFound": 13855,
+                "phrase": "weather happen center seat whole",
+                "realTime": 0.012602,
+                "solrQTime": 3
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:29.735859",
+                "numFound": 13855,
+                "phrase": "weather happen center seat whole",
+                "realTime": 0.008604,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:29.786544",
+                "numFound": 7418,
+                "phrase": "death low colony safe rule",
+                "realTime": 0.022076,
+                "solrQTime": 13
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:29.893736",
+                "numFound": 7418,
+                "phrase": "death low colony safe rule",
+                "realTime": 0.010841,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:29.991023",
+                "numFound": 7418,
+                "phrase": "death low colony safe rule",
+                "realTime": 0.008888,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:30.089493",
+                "numFound": 7418,
+                "phrase": "death low colony safe rule",
+                "realTime": 0.010817,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:30.186013",
+                "numFound": 9907,
+                "phrase": "key shape show sky happen",
+                "realTime": 0.021747,
+                "solrQTime": 12
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:30.325135",
+                "numFound": 9907,
+                "phrase": "key shape show sky happen",
+                "realTime": 0.009949,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:30.449230",
+                "numFound": 9907,
+                "phrase": "key shape show sky happen",
+                "realTime": 0.009934,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:30.585458",
+                "numFound": 9907,
+                "phrase": "key shape show sky happen",
+                "realTime": 0.011505,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:30.736945",
+                "numFound": 7588,
+                "phrase": "decimal sky region continent music",
+                "realTime": 0.029396,
+                "solrQTime": 20
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:30.845542",
+                "numFound": 7588,
+                "phrase": "decimal sky region continent music",
+                "realTime": 0.010875,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:30.930712",
+                "numFound": 7588,
+                "phrase": "decimal sky region continent music",
+                "realTime": 0.007754,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:31.011737",
+                "numFound": 7588,
+                "phrase": "decimal sky region continent music",
+                "realTime": 0.011926,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:31.113088",
+                "numFound": 6724,
+                "phrase": "trip mouth check doctor distant",
+                "realTime": 0.022142,
+                "solrQTime": 13
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:31.277415",
+                "numFound": 6724,
+                "phrase": "trip mouth check doctor distant",
+                "realTime": 0.008532,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:31.407890",
+                "numFound": 6724,
+                "phrase": "trip mouth check doctor distant",
+                "realTime": 0.010099,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:31.543159",
+                "numFound": 6724,
+                "phrase": "trip mouth check doctor distant",
+                "realTime": 0.010063,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:31.676815",
+                "numFound": 17008,
+                "phrase": "single area mountain north much",
+                "realTime": 0.030954,
+                "solrQTime": 19
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:31.842128",
+                "numFound": 17008,
+                "phrase": "single area mountain north much",
+                "realTime": 0.01154,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:31.984589",
+                "numFound": 17008,
+                "phrase": "single area mountain north much",
+                "realTime": 0.00956,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:32.127044",
+                "numFound": 17008,
+                "phrase": "single area mountain north much",
+                "realTime": 0.008922,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:32.273295",
+                "numFound": 19253,
+                "phrase": "month king climb travel dictionary",
+                "realTime": 0.027734,
+                "solrQTime": 19
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:32.458670",
+                "numFound": 19253,
+                "phrase": "month king climb travel dictionary",
+                "realTime": 0.01107,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:32.640392",
+                "numFound": 19253,
+                "phrase": "month king climb travel dictionary",
+                "realTime": 0.011025,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:32.817809",
+                "numFound": 19253,
+                "phrase": "month king climb travel dictionary",
+                "realTime": 0.011798,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:32.995062",
+                "numFound": 11845,
+                "phrase": "final offer ago molecule dollar",
+                "realTime": 0.019134,
+                "solrQTime": 10
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:33.070043",
+                "numFound": 11845,
+                "phrase": "final offer ago molecule dollar",
+                "realTime": 0.01077,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:33.143113",
+                "numFound": 11845,
+                "phrase": "final offer ago molecule dollar",
+                "realTime": 0.010945,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:33.214542",
+                "numFound": 11845,
+                "phrase": "final offer ago molecule dollar",
+                "realTime": 0.012729,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:33.291201",
+                "numFound": 18838,
+                "phrase": "thus soon three expect master",
+                "realTime": 0.025868,
+                "solrQTime": 15
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:33.615991",
+                "numFound": 18838,
+                "phrase": "thus soon three expect master",
+                "realTime": 0.010801,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:33.775813",
+                "numFound": 18838,
+                "phrase": "thus soon three expect master",
+                "realTime": 0.010187,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:33.939868",
+                "numFound": 18838,
+                "phrase": "thus soon three expect master",
+                "realTime": 0.009348,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-11-30 13:17:34.113987",
+                "numFound": 22800,
+                "phrase": "print cloud own deal discuss",
+                "realTime": 0.039772,
+                "solrQTime": 30
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:34.250917",
+                "numFound": 22800,
+                "phrase": "print cloud own deal discuss",
+                "realTime": 0.00849,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:34.356909",
+                "numFound": 22800,
+                "phrase": "print cloud own deal discuss",
+                "realTime": 0.009934,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-11-30 13:17:34.466728",
+                "numFound": 22800,
+                "phrase": "print cloud own deal discuss",
+                "realTime": 0.011838,
+                "solrQTime": 1
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 17881.2,
+        "max": 39977,
+        "min": 6724
+    },
+    "summary": {
+        "environment": "PROD",
+        "environment uri": "http://compass-fedora-prod.fivecolleges.edu:8080/solr/collection1/",
+        "first (unique) time avg": 18.666666666666668,
+        "last (cached) time avg": 1.2,
+        "numFound ave": 17881.2,
+        "numFound max": 39977,
+        "numFound min": 6724,
+        "test end time": "2018-11-30 13:17:34.591733",
+        "test start time": "2018-11-30 13:17:19.560383"
+    }
+}

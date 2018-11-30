@@ -35,7 +35,7 @@ import pprint
 
 CONFIGFILE = "compass.cfg"
 
-NUM_UNIQUE_CHECKS = 3
+NUM_UNIQUE_CHECKS = 30
 NUM_REPEAT_CHECKS = 4
 
 PLACES = 5
@@ -61,6 +61,8 @@ except KeyError:
 
 #protocol_host_port = "http://compass-fedora-prod.fivecolleges.edu:8080"
 protocol_host_port = serverConfig['solr_protocol'] + "://" + serverConfig['solr_hostname'] + ":" + serverConfig['solr_port']
+solr_core_path = serverConfig['solr_core_path']
+solr_end_point = protocol_host_port + solr_core_path
 
 FINAL_REPORT = {}
 
@@ -78,7 +80,8 @@ def makeRandomeSolrQuery():
     }
     solrRequest["phrase"] = phrase
     urlParameters = urllib.parse.urlencode(urlParameters)
-    solrRequest["requestUrl"] = protocol_host_port + "/solr/collection1/select?%s&wt=json&indent=true&defType=dismax" % urlParameters
+    solrQuery = "select?%s&wt=json&indent=true&defType=dismax" % urlParameters
+    solrRequest["requestUrl"] = solr_end_point + solrQuery
     return solrRequest
 
 def doCheck(solrRequest):
@@ -144,12 +147,19 @@ FINAL_REPORT["summary"]["numFound min"] = FINAL_REPORT["numFound"]['min']
 FINAL_REPORT["summary"]["numFound ave"] = FINAL_REPORT["numFound"]['average']
 
 # Average times of last hit (both Solr "Qtime" and real time)
-FINAL_REPORT["summary"]["1st (unique) time avg"] = FINAL_REPORT["averagesSolrQTime"][0]
+FINAL_REPORT["summary"]["first (unique) time avg"] = FINAL_REPORT["averagesSolrQTime"][0]
 FINAL_REPORT["summary"]["last (cached) time avg"] = FINAL_REPORT["averagesSolrQTime"][-1]
+FINAL_REPORT["summary"]["environment"] = cliArguments.SERVERCFG
+FINAL_REPORT["summary"]["environment uri"] = solr_end_point
+
+
 
 
 pprint.pprint(FINAL_REPORT["summary"])
 
 outputFilename = 'solr-' + FINAL_REPORT["summary"]["test start time"].strftime("%Y-%m-%d_%H-%M-%S-%f") + '_' + cliArguments.SERVERCFG.strip() + ".json"
-with open('output/' + outputFilename, 'w') as fp:
+outputFilenamePath = 'output/' + outputFilename
+with open(outputFilenamePath, 'w') as fp:
     json.dump(FINAL_REPORT, fp, indent=4, sort_keys=True, default=str)
+
+logging.info("Data logged to %s" % outputFilenamePath)
