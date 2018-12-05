@@ -61,18 +61,46 @@ except KeyError:
     print("'%s' section not present in configuration file %s" % (section, CONFIGFILE))
     exit(1)
 
-#protocol_host_port = "http://compass-fedora-prod.fivecolleges.edu:8080"
-protocol_host_port = serverConfig['solr_protocol'] + "://" + serverConfig['solr_hostname'] + ":" + serverConfig['solr_port']
+drupal_protocol_host_port = serverConfig['drupal_protocol'] + "://" + serverConfig['drupal_hostname']
+drupal_object_path = serverConfig['drupal_object_path']
+drupal_end_point = drupal_protocol_host_port + drupal_object_path
+
+solr_protocol_host_port = serverConfig['solr_protocol'] + "://" + serverConfig['solr_hostname'] + ":" + serverConfig['solr_port']
 solr_core_path = serverConfig['solr_core_path']
-solr_end_point = protocol_host_port + solr_core_path
+solr_end_point = solr_protocol_host_port + solr_core_path
+
+def checkRequestStatusCodes(request):
+    """This helper function checks the response from a request for problems and then
+    returns the data if everything is fine.
+    """
+    if request.status_code == 403:
+        logging.error("Forbidden -- check your credentials.")
+        exit(1)
+    elif request.status_code == 400:
+        logging.error("400 Error")
+        exit(1)
+    elif request.status_code == 404:
+        logging.error("404 Not Found: %s" % request.url)
+        exit(1)
+    elif request.status_code == 500:
+        logging.error("500 Internal Server Error")
+        exit(1)
+    elif request.status_code == 200:
+        logging.debug("200 Response AOK")
+        return request
+    else:
+        logging.error(str(request.status_code))
+        exit(1)
 
 def makeSampleObjectList():
     """Query Solr for a good size list of objects then filter them by size to
     produce a list of objects that are greater than MIN_ASSET_SIZE.
     """
-    SolrQueryUrl = "http://compass-fedora-prod.fivecolleges.edu:8080/solr/collection1/select?q=*%3A*&rows=100000&fl=PID%2Cfedora_datastream_latest_OBJ_SIZE_ms&wt=json&indent=true"
+    
+    SolrQueryUrl = solr_end_point + "select?q=*%3A*&rows=100000&fl=PID%2Cfedora_datastream_latest_OBJ_SIZE_ms&wt=json&indent=true"
     logging.debug("Getting a random list of objects")
     request = requests.get(SolrQueryUrl)
+    checkRequestStatusCodes(request)
     objectList = request.json()["response"]["docs"]
     # Now filter the list for objects that are a decent size.
     # Solr is storing data stream sizes in a string field so a range
@@ -97,7 +125,8 @@ def cacheObjectList(objectList):
         'dateStamp': datetime.now(),
         'objectList': objectList
     }
-    with open('largeobjectslist.cache', 'wb') as f:
+    largeobjectslistFilename = 'largeobjectslist-%s.cache' % cliArguments.SERVERCFG
+    with open(largeobjectslistFilename, 'wb') as f:
         # Pickle the 'data' dictionary using the highest protocol available.
         pickle.dump(objectListCache, f, pickle.HIGHEST_PROTOCOL)
 
@@ -148,6 +177,7 @@ def downloadObject(downloadUrl):
     report['url'] = downloadUrl
     requestStart=datetime.now()
     request = requests.get(downloadUrl, allow_redirects=True)
+    checkRequestStatusCodes(request)
     report['transferElapsedTime'] = datetime.now()-requestStart
     report['transferElapsedTime'] = float(report['transferElapsedTime'].total_seconds())
     logging.debug('Transfer time: %s' % report['transferElapsedTime'])
@@ -185,7 +215,7 @@ objectList = loadObjectList()
 logging.debug("Using object list of %s items" % len(objectList))
 def getFreshObjectUrl():
     objectPid = objectList[random.randint(0,len(objectList) - 1)]['PID']
-    downloadUrl = "https://compass.fivecolleges.edu/islandora/object/%s/datastream/OBJ/download" % objectPid
+    downloadUrl = drupal_end_point + "%s/datastream/OBJ/download" % objectPid
     try:
         dateStamp = queryHistory[downloadUrl]
         logging.debug("URL found in history with datestamp: %s" % dateStamp)

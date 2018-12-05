@@ -1,4 +1,7 @@
 largeobjectslist.cache
+largeobjectslist-DEV.cache
+largeobjectslist-PROD.cache
+largeobjectslist-STAGE.cache
 .last-fedora-download
 /output/DEBUG*
 
