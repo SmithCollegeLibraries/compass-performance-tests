@@ -30,14 +30,14 @@ logging.getLogger("requests").setLevel(logging.WARNING)
 
 import pprint
 
-CONFIGFILE = "compass.cfg"
+CONFIGFILE = "islandora.cfg"
 
 logging.getLogger("requests").setLevel(logging.WARNING)
 
 argparser = argparse.ArgumentParser(description=description)
 argparser.add_argument("--debug", action='store_true', help="Go into debug mode -- fewer unique queries, more verbosity, write to files labeled with 'DEBUG'")
 argparser.add_argument("--dry-run", action='store_true', help="Do not write out json report file")
-argparser.add_argument("SERVERCFG", default="PROD", help="Name of the server configuration section e.g. 'PROD' or 'STAGE'. Edit compass.cfg to add a server configuration section.")
+argparser.add_argument("SERVERCFG", default="PROD", help="Name of the server configuration section e.g. 'PROD' or 'STAGE'. Edit islandora.cfg to add a server configuration section.")
 cliArguments = argparser.parse_args()
 
 if cliArguments.debug:

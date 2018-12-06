@@ -37,4 +37,4 @@ python3 check-fedora.py PROD
 ```
 
 ## Server configurations
-Server configurations are located in `compass.cfg`. Edit this file as needed. When running the commands you must specify a server config. E.g. 'PROD' or 'STAGE'.
+Server configurations are located in `islandora.cfg`. Edit this file as needed. When running the commands you must specify a server config. E.g. 'PROD' or 'STAGE'.
