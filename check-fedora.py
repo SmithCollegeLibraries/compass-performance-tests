@@ -48,6 +48,7 @@ else:
 
 section = cliArguments.SERVERCFG
 configData = configparser.ConfigParser()
+largeobjectslistFilename = 'largeobjectslist-%s.cache' % cliArguments.SERVERCFG
 
 try:
     configData.read_file(open(CONFIGFILE), source=CONFIGFILE)
@@ -69,13 +70,20 @@ solr_protocol_host_port = serverConfig['solr_protocol'] + "://" + serverConfig['
 solr_core_path = serverConfig['solr_core_path']
 solr_end_point = solr_protocol_host_port + solr_core_path
 
+class Forbidden(Exception):
+    """Exception for handling restricted objects.
+    """
+    pass
+
+class OtherException(Exception):
+    pass
+
 def checkRequestStatusCodes(request):
     """This helper function checks the response from a request for problems and then
     returns the data if everything is fine.
     """
     if request.status_code == 403:
-        logging.error("Forbidden -- check your credentials.")
-        exit(1)
+        raise Forbidden("%s" % request.url)
     elif request.status_code == 400:
         logging.error("400 Error")
         exit(1)
@@ -99,8 +107,11 @@ def makeSampleObjectList():
     
     SolrQueryUrl = solr_end_point + "select?q=*%3A*&rows=100000&fl=PID%2Cfedora_datastream_latest_OBJ_SIZE_ms&wt=json&indent=true"
     logging.debug("Getting a random list of objects")
-    request = requests.get(SolrQueryUrl)
-    checkRequestStatusCodes(request)
+    try:
+        request = requests.get(SolrQueryUrl)
+        checkRequestStatusCodes(request)
+    except Forbidden:
+        logging.error("Unable to access: %s" % SolrQueryUrl)
     objectList = request.json()["response"]["docs"]
     # Now filter the list for objects that are a decent size.
     # Solr is storing data stream sizes in a string field so a range
@@ -125,7 +136,6 @@ def cacheObjectList(objectList):
         'dateStamp': datetime.now(),
         'objectList': objectList
     }
-    largeobjectslistFilename = 'largeobjectslist-%s.cache' % cliArguments.SERVERCFG
     with open(largeobjectslistFilename, 'wb') as f:
         # Pickle the 'data' dictionary using the highest protocol available.
         pickle.dump(objectListCache, f, pickle.HIGHEST_PROTOCOL)
@@ -139,7 +149,7 @@ def loadObjectList():
     logging.debug("Loading an object list")
 
     try:
-        with open('largeobjectslist.cache', 'rb') as f:
+        with open(largeobjectslistFilename, 'rb') as f:
             objectListCache = pickle.load(f)
         cacheAge = datetime.now() - objectListCache['dateStamp']
         logging.debug("Cache timestamp: %s" % objectListCache['dateStamp'])
@@ -232,12 +242,22 @@ def getFreshObjectUrl():
         logging.debug("URL not even in history")
         return downloadUrl
 
+def downloadFreshObject():
+    downloadUrl = getFreshObjectUrl()
+    try:
+        objectReport = downloadObject(downloadUrl)
+        return objectReport
+    except Forbidden:
+        # If the object was forbidden just try another one (lazy I know)
+        logging.debug("%s is forbidden, trying another one." % downloadUrl)
+        return downloadFreshObject()
+
 for i in range(NUM_UNIQUE_CHECKS):
     logging.debug("***** START LOOP *****")
-    downloadUrl = getFreshObjectUrl()
-    queryHistory[downloadUrl] = datetime.now()
-    objectReport = downloadObject(downloadUrl)
     logging.debug("Save query history for later")
+    objectReport = downloadFreshObject()
+    downloadUrl = objectReport['url']
+    queryHistory[downloadUrl] = datetime.now()
     with open('fedora-queryhistory.json', 'w') as fp:
         # Do this on every request in case something happens before we get to
         # the end of the program
