@@ -25,6 +25,7 @@ import urllib
 import requests
 import datetime
 import json
+import time
 
 import argparse
 import configparser
@@ -37,6 +38,7 @@ CONFIGFILE = "islandora.cfg"
 
 NUM_UNIQUE_CHECKS = 30
 NUM_REPEAT_CHECKS = 4
+SOLR_WARMUP_TIME = 30 # seconds
 
 PLACES = 5
 
@@ -44,35 +46,33 @@ argparser = argparse.ArgumentParser(description=description)
 argparser.add_argument("--debug", action='store_true', help="Go into debug mode -- fewer unique queries, more verbosity, write to files labeled with 'DEBUG'")
 argparser.add_argument("--dry-run", action='store_true', help="Do not write out json report file")
 argparser.add_argument("SERVERCFG", default="PROD", help="Name of the server configuration section e.g. 'PROD' or 'STAGE'. Edit islandora.cfg to add a server configuration section.")
-cliArguments = argparser.parse_args()
+CLI_ARGUMENTS = argparser.parse_args()
 
-if cliArguments.debug:
+if CLI_ARGUMENTS.debug:
     NUM_UNIQUE_CHECKS = 3
     logging.basicConfig(level=logging.DEBUG)
 else:
     logging.basicConfig(level=logging.INFO)
 
-section = cliArguments.SERVERCFG
-configData = configparser.ConfigParser()
+SECTION = CLI_ARGUMENTS.SERVERCFG
+CONFIG_DATA = configparser.ConfigParser()
 
 try:
-    configData.read_file(open(CONFIGFILE), source=CONFIGFILE)
+    CONFIG_DATA.read_file(open(CONFIGFILE), source=CONFIGFILE)
 except FileNotFoundError:
     logging.error('No configuration file found. Configuration file required. Please make a config file called %s.' % CONFIGFILE)
     exit(1)
     
 try:
-    serverConfig = configData[section]
+    SERVER_CONFIG = CONFIG_DATA[SECTION]
 except KeyError:
-    print("'%s' section not present in configuration file %s" % (section, CONFIGFILE))
+    print("'%s' section not present in configuration file %s" % (SECTION, CONFIGFILE))
     exit(1)
 
 #protocol_host_port = "http://compass-fedora-prod.fivecolleges.edu:8080"
-protocol_host_port = serverConfig['solr_protocol'] + "://" + serverConfig['solr_hostname'] + ":" + serverConfig['solr_port']
-solr_core_path = serverConfig['solr_core_path']
+protocol_host_port = SERVER_CONFIG['solr_protocol'] + "://" + SERVER_CONFIG['solr_hostname'] + ":" + SERVER_CONFIG['solr_port']
+solr_core_path = SERVER_CONFIG['solr_core_path']
 solr_end_point = protocol_host_port + solr_core_path
-
-FINAL_REPORT = {}
 
 def makeRandomeSolrQuery():
     solrRequest = {}
@@ -106,69 +106,80 @@ def doCheck(solrRequest):
     reportData["numFound"] = response.json()["response"]["numFound"]
     return reportData
 
-FINAL_REPORT["data"] = []
+def checkSolr():
+    finalReport = {}
+    finalReport["data"] = []
 
-FINAL_REPORT["summary"] = {}
-FINAL_REPORT["summary"]["test start time"] = datetime.datetime.now()
+    finalReport["summary"] = {}
+    finalReport["summary"]["test start time"] = datetime.datetime.now()
 
-# -- MAIN LOOP --
-logging.info("Querying Solr with %s unique queries, each repeating %s times." % (NUM_UNIQUE_CHECKS, NUM_REPEAT_CHECKS) )
-for i in range(NUM_UNIQUE_CHECKS):
-    solrRequest = makeRandomeSolrQuery()
-    repeatCheckReport = []
+    # -- MAIN LOOP --
+    logging.info("Querying Solr with %s unique queries, each repeating %s times." % (NUM_UNIQUE_CHECKS, NUM_REPEAT_CHECKS) )
+    for i in range(NUM_UNIQUE_CHECKS):
+        solrRequest = makeRandomeSolrQuery()
+        repeatCheckReport = []
+        for i in range(NUM_REPEAT_CHECKS):
+            singleCheckReport = doCheck(solrRequest)
+            repeatCheckReport.append(singleCheckReport)
+        finalReport["data"].append(repeatCheckReport)
+
+    finalReport["summary"]["test end time"] = datetime.datetime.now()
+
+    # -- Generate summary report --
+    # Average times of 1st hit (both Solr "Qtime" and real time)
+    def getAverage(data, index, type):
+        sum = 0
+        for queryResponses in data:
+            sum = sum + queryResponses[index][type]
+        average = sum/NUM_UNIQUE_CHECKS
+        return average
+
+    def getMaxMin(data, index, type):
+        myList = []
+        for queryResponses in data:
+            myList.append(queryResponses[index][type])
+        return {'max': max(myList), 'min': min(myList)}
+
+    finalReport["averagesRealTime"] = []
+    finalReport["averagesSolrQTime"] = []
+
+    # Get average load times for 1st and last repeat query
     for i in range(NUM_REPEAT_CHECKS):
-        singleCheckReport = doCheck(solrRequest)
-        repeatCheckReport.append(singleCheckReport)
-    FINAL_REPORT["data"].append(repeatCheckReport)
+        finalReport["averagesRealTime"].append(getAverage(finalReport["data"], i, 'realTime'))
+        finalReport["averagesSolrQTime"].append(getAverage(finalReport["data"], i, 'solrQTime'))
 
-FINAL_REPORT["summary"]["test end time"] = datetime.datetime.now()
+    # Get average number of search results
+    finalReport["numFound"] = getMaxMin(finalReport["data"], 0, 'numFound')
+    finalReport["numFound"]["average"] = getAverage(finalReport["data"], 0, 'numFound')
+    # Report out max, min, and average number of results
+    finalReport["summary"]["numFound max"] = finalReport["numFound"]['max']
+    finalReport["summary"]["numFound min"] = finalReport["numFound"]['min']
+    finalReport["summary"]["numFound ave"] = finalReport["numFound"]['average']
 
-# -- Generate summary report --
-# Average times of 1st hit (both Solr "Qtime" and real time)
-def getAverage(data, index, type):
-    sum = 0
-    for queryResponses in data:
-        sum = sum + queryResponses[index][type]
-    average = sum/NUM_UNIQUE_CHECKS
-    return average
+    # Average times of last hit (both Solr "Qtime" and real time)
+    finalReport["summary"]["first (unique) time avg"] = finalReport["averagesSolrQTime"][0]
+    finalReport["summary"]["last (cached) time avg"] = finalReport["averagesSolrQTime"][-1]
+    finalReport["summary"]["environment"] = CLI_ARGUMENTS.SERVERCFG
+    finalReport["summary"]["environment uri"] = solr_end_point
+    
+    return finalReport
 
-def getMaxMin(data, index, type):
-    myList = []
-    for queryResponses in data:
-        myList.append(queryResponses[index][type])
-    return {'max': max(myList), 'min': min(myList)}
+if __name__ == "__main__":
+    logging.info("Warming up Solr")
+    ColdFinalReport = checkSolr()
+    logging.debug(ColdFinalReport["summary"])
+    logging.info("Waiting %s seconds for Solr to warm up" % SOLR_WARMUP_TIME)
+    time.sleep(SOLR_WARMUP_TIME)
 
-FINAL_REPORT["averagesRealTime"] = []
-FINAL_REPORT["averagesSolrQTime"] = []
+    finalReport = checkSolr()
+    pprint.pprint(finalReport["summary"])
 
-# Get average load times for 1st and last repeat query
-for i in range(NUM_REPEAT_CHECKS):
-    FINAL_REPORT["averagesRealTime"].append(getAverage(FINAL_REPORT["data"], i, 'realTime'))
-    FINAL_REPORT["averagesSolrQTime"].append(getAverage(FINAL_REPORT["data"], i, 'solrQTime'))
+    if not CLI_ARGUMENTS.dry_run:
+        outputFilename = 'solr-' + finalReport["summary"]["test start time"].strftime("%Y-%m-%d_%H-%M-%S-%f") + '_' + CLI_ARGUMENTS.SERVERCFG.strip() + ".json"
+        if CLI_ARGUMENTS.debug:
+            outputFilename = "DEBUG-" + outputFilename
+        outputFilenamePath = 'output/' + outputFilename
+        with open(outputFilenamePath, 'w') as fp:
+            json.dump(finalReport, fp, indent=4, sort_keys=True, default=str)
 
-# Get average number of search results
-FINAL_REPORT["numFound"] = getMaxMin(FINAL_REPORT["data"], 0, 'numFound')
-FINAL_REPORT["numFound"]["average"] = getAverage(FINAL_REPORT["data"], 0, 'numFound')
-# Report out max, min, and average number of results
-FINAL_REPORT["summary"]["numFound max"] = FINAL_REPORT["numFound"]['max']
-FINAL_REPORT["summary"]["numFound min"] = FINAL_REPORT["numFound"]['min']
-FINAL_REPORT["summary"]["numFound ave"] = FINAL_REPORT["numFound"]['average']
-
-# Average times of last hit (both Solr "Qtime" and real time)
-FINAL_REPORT["summary"]["first (unique) time avg"] = FINAL_REPORT["averagesSolrQTime"][0]
-FINAL_REPORT["summary"]["last (cached) time avg"] = FINAL_REPORT["averagesSolrQTime"][-1]
-FINAL_REPORT["summary"]["environment"] = cliArguments.SERVERCFG
-FINAL_REPORT["summary"]["environment uri"] = solr_end_point
-
-
-pprint.pprint(FINAL_REPORT["summary"])
-
-if not cliArguments.dry_run:
-    outputFilename = 'solr-' + FINAL_REPORT["summary"]["test start time"].strftime("%Y-%m-%d_%H-%M-%S-%f") + '_' + cliArguments.SERVERCFG.strip() + ".json"
-    if cliArguments.debug:
-        outputFilename = "DEBUG-" + outputFilename
-    outputFilenamePath = 'output/' + outputFilename
-    with open(outputFilenamePath, 'w') as fp:
-        json.dump(FINAL_REPORT, fp, indent=4, sort_keys=True, default=str)
-
-    logging.info("Data logged to %s" % outputFilenamePath)
+        logging.info("Data logged to %s" % outputFilenamePath)
