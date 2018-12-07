@@ -216,7 +216,7 @@ if __name__ == "__main__":
     isTheSame = SamenessObserver(firstQTime, 1)
     solrQTime = 0
     while not isTheSame.check(solrQTime):
-        time.sleep(30)
+        time.sleep(60)
         coldFinalReport = checkSolr()
         solrQTime = coldFinalReport["summary"]['first (unique) time avg']
         logging.info("Solr QTime: %s" % solrQTime)
