@@ -38,41 +38,8 @@ CONFIGFILE = "islandora.cfg"
 
 NUM_UNIQUE_CHECKS = 30
 NUM_REPEAT_CHECKS = 4
-SOLR_WARMUP_TIME = 30 # seconds
 
 PLACES = 5
-
-argparser = argparse.ArgumentParser(description=description)
-argparser.add_argument("--debug", action='store_true', help="Go into debug mode -- fewer unique queries, more verbosity, write to files labeled with 'DEBUG'")
-argparser.add_argument("--dry-run", action='store_true', help="Do not write out json report file")
-argparser.add_argument("SERVERCFG", default="PROD", help="Name of the server configuration section e.g. 'PROD' or 'STAGE'. Edit islandora.cfg to add a server configuration section.")
-CLI_ARGUMENTS = argparser.parse_args()
-
-if CLI_ARGUMENTS.debug:
-    NUM_UNIQUE_CHECKS = 3
-    logging.basicConfig(level=logging.DEBUG)
-else:
-    logging.basicConfig(level=logging.INFO)
-
-SECTION = CLI_ARGUMENTS.SERVERCFG
-CONFIG_DATA = configparser.ConfigParser()
-
-try:
-    CONFIG_DATA.read_file(open(CONFIGFILE), source=CONFIGFILE)
-except FileNotFoundError:
-    logging.error('No configuration file found. Configuration file required. Please make a config file called %s.' % CONFIGFILE)
-    exit(1)
-    
-try:
-    SERVER_CONFIG = CONFIG_DATA[SECTION]
-except KeyError:
-    print("'%s' section not present in configuration file %s" % (SECTION, CONFIGFILE))
-    exit(1)
-
-#protocol_host_port = "http://compass-fedora-prod.fivecolleges.edu:8080"
-protocol_host_port = SERVER_CONFIG['solr_protocol'] + "://" + SERVER_CONFIG['solr_hostname'] + ":" + SERVER_CONFIG['solr_port']
-solr_core_path = SERVER_CONFIG['solr_core_path']
-solr_end_point = protocol_host_port + solr_core_path
 
 def makeRandomeSolrQuery():
     solrRequest = {}
@@ -164,14 +131,99 @@ def checkSolr():
     
     return finalReport
 
-if __name__ == "__main__":
-    logging.info("Warming up Solr")
-    ColdFinalReport = checkSolr()
-    logging.debug(ColdFinalReport["summary"])
-    logging.info("Waiting %s seconds for Solr to warm up" % SOLR_WARMUP_TIME)
-    time.sleep(SOLR_WARMUP_TIME)
+class SamenessObserver:
+    """An object for watching a series of values to see if they stay the same.
+    If a fuzy match is required maxDeviation may be set to some tolerance.
+    
+    >>> myobserver = SamenessObserver(10)
+    >>> myobserver.check(9)
+    False
+    >>> myobserver.check(9)
+    True
+    >>> myobserver.check(9)
+    True
+    >>> myobserver.check(10)
+    False
+    >>> myobserver.check(10)
+    True
+    >>> myobserver.check(11)
+    False
+    >>> myobserver = SamenessObserver(10, 1)
+    >>> myobserver.check(11)
+    True
+    >>> myobserver.check(11)
+    True
+    >>> myobserver.check(10)
+    True
+    >>> myobserver.check(12)
+    False
+    >>> myobserver.check(11)
+    True
+    >>> 
 
-    finalReport = checkSolr()
+    """
+
+    def __init__(self, initialValue, maxDeviation=0):
+        self.current = 0
+        self.previous = initialValue
+        self.maxDeviation = maxDeviation
+
+    def check(self, value):
+        self.current = value
+        sameness = (self.previous - self.maxDeviation) <= self.current <= (self.previous + self.maxDeviation)
+        self.previous = self.current
+        return sameness
+
+if __name__ == "__main__":
+    argparser = argparse.ArgumentParser(description=description)
+    argparser.add_argument("--debug", action='store_true', help="Go into debug mode -- fewer unique queries, more verbosity, write to files labeled with 'DEBUG'")
+    argparser.add_argument("--dry-run", action='store_true', help="Do not write out json report file")
+    argparser.add_argument("SERVERCFG", default="PROD", help="Name of the server configuration section e.g. 'PROD' or 'STAGE'. Edit islandora.cfg to add a server configuration section.")
+    CLI_ARGUMENTS = argparser.parse_args()
+
+    if CLI_ARGUMENTS.debug:
+        NUM_UNIQUE_CHECKS = 3
+        logging.basicConfig(level=logging.DEBUG)
+    else:
+        logging.basicConfig(level=logging.INFO)
+
+    SECTION = CLI_ARGUMENTS.SERVERCFG
+    CONFIG_DATA = configparser.ConfigParser()
+
+    try:
+        CONFIG_DATA.read_file(open(CONFIGFILE), source=CONFIGFILE)
+    except FileNotFoundError:
+        logging.error('No configuration file found. Configuration file required. Please make a config file called %s.' % CONFIGFILE)
+        exit(1)
+        
+    try:
+        SERVER_CONFIG = CONFIG_DATA[SECTION]
+    except KeyError:
+        print("'%s' section not present in configuration file %s" % (SECTION, CONFIGFILE))
+        exit(1)
+    
+    #protocol_host_port = "http://compass-fedora-prod.fivecolleges.edu:8080"
+    protocol_host_port = SERVER_CONFIG['solr_protocol'] + "://" + SERVER_CONFIG['solr_hostname'] + ":" + SERVER_CONFIG['solr_port']
+    solr_core_path = SERVER_CONFIG['solr_core_path']
+    solr_end_point = protocol_host_port + solr_core_path
+    
+    logging.info("Warming up Solr")
+    
+    previousQTime = 0
+    coldFinalReport = checkSolr()
+    firstQTime = coldFinalReport["summary"]['first (unique) time avg']
+    logging.info("Solr QTime: %s" % firstQTime)
+    isTheSame = SamenessObserver(firstQTime, 1)
+    solrQTime = 0
+    while not isTheSame.check(solrQTime):
+        time.sleep(30)
+        coldFinalReport = checkSolr()
+        solrQTime = coldFinalReport["summary"]['first (unique) time avg']
+        logging.info("Solr QTime: %s" % solrQTime)
+
+    logging.info("Solr warmed up. Recording results.")
+
+    finalReport = coldFinalReport
     pprint.pprint(finalReport["summary"])
 
     if not CLI_ARGUMENTS.dry_run:
