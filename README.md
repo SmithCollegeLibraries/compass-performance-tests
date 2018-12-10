@@ -8,12 +8,16 @@ These tools are intended to be run on a machine on the same network as the servi
 This tool is for testing the performance of Solr.
 
 Queries Solr with a random phrase of English words and records the response
-times. Queries several times to make an average number. Also repeats query
-to compare unique vs cached query times.
+times.
 
-Note: if Solr has been dormant for a while it will be slow to respond at first.
-This test should be run several times to determine "start up" performance vs
-"warmed up" performance.
+Sample phrases:
+```
+"cause rub bat side magnet"
+"value dry age near carry"
+"six anger ice many born"
+```
+
+Queries several times (30) to make an average number. Also repeats query to compare unique vs cached query times. Solr has a warm up time with a long tail settle down time so the test is repeated several times with a delay between each test. When the results approximately match the last test the number is recorded. This can take several minutes.
 
 Assumptions: the astronomically low probably of a repeat (1 out of 5^975)
 renders the random phrases virtually unique within a typical query cache lifetime.
