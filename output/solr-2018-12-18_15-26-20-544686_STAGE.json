@@ -1,0 +1,932 @@
+{
+    "averagesRealTime": [
+        0.033964833333333326,
+        0.005500866666666665,
+        0.005615366666666666,
+        0.005324366666666668
+    ],
+    "averagesSolrQTime": [
+        18.666666666666668,
+        0.7333333333333333,
+        0.8,
+        1.0333333333333334
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:20.545325",
+                "numFound": 8080,
+                "phrase": "compare sound share list square",
+                "realTime": 0.291183,
+                "solrQTime": 25
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:20.985385",
+                "numFound": 8080,
+                "phrase": "compare sound share list square",
+                "realTime": 0.006969,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:21.070783",
+                "numFound": 8080,
+                "phrase": "compare sound share list square",
+                "realTime": 0.00698,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:21.159081",
+                "numFound": 8080,
+                "phrase": "compare sound share list square",
+                "realTime": 0.007101,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:21.254992",
+                "numFound": 10271,
+                "phrase": "stop ship port country fly",
+                "realTime": 0.030812,
+                "solrQTime": 24
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:21.752019",
+                "numFound": 10271,
+                "phrase": "stop ship port country fly",
+                "realTime": 0.007724,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:21.901225",
+                "numFound": 10271,
+                "phrase": "stop ship port country fly",
+                "realTime": 0.007496,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:22.046254",
+                "numFound": 10271,
+                "phrase": "stop ship port country fly",
+                "realTime": 0.006957,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:22.195900",
+                "numFound": 7891,
+                "phrase": "planet hole divide continue farm",
+                "realTime": 0.028369,
+                "solrQTime": 22
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:22.414653",
+                "numFound": 7891,
+                "phrase": "planet hole divide continue farm",
+                "realTime": 0.006948,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:22.557209",
+                "numFound": 7891,
+                "phrase": "planet hole divide continue farm",
+                "realTime": 0.011183,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:22.712840",
+                "numFound": 7891,
+                "phrase": "planet hole divide continue farm",
+                "realTime": 0.007653,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:22.862923",
+                "numFound": 12256,
+                "phrase": "class power too corner force",
+                "realTime": 0.021564,
+                "solrQTime": 13
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:22.945947",
+                "numFound": 12256,
+                "phrase": "class power too corner force",
+                "realTime": 0.003926,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:23.006769",
+                "numFound": 12256,
+                "phrase": "class power too corner force",
+                "realTime": 0.005398,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:23.070352",
+                "numFound": 12256,
+                "phrase": "class power too corner force",
+                "realTime": 0.004057,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:23.133727",
+                "numFound": 8937,
+                "phrase": "oxygen way sea animal soft",
+                "realTime": 0.015648,
+                "solrQTime": 11
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:23.221128",
+                "numFound": 8937,
+                "phrase": "oxygen way sea animal soft",
+                "realTime": 0.004519,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:23.267297",
+                "numFound": 8937,
+                "phrase": "oxygen way sea animal soft",
+                "realTime": 0.004343,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:23.319926",
+                "numFound": 8937,
+                "phrase": "oxygen way sea animal soft",
+                "realTime": 0.004261,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:23.368158",
+                "numFound": 26842,
+                "phrase": "any floor grew mount quite",
+                "realTime": 0.019979,
+                "solrQTime": 16
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:23.557047",
+                "numFound": 26842,
+                "phrase": "any floor grew mount quite",
+                "realTime": 0.004166,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:23.584143",
+                "numFound": 26842,
+                "phrase": "any floor grew mount quite",
+                "realTime": 0.003922,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:23.609412",
+                "numFound": 26842,
+                "phrase": "any floor grew mount quite",
+                "realTime": 0.003796,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:23.634185",
+                "numFound": 6985,
+                "phrase": "floor rub round love came",
+                "realTime": 0.01819,
+                "solrQTime": 15
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:23.721562",
+                "numFound": 6985,
+                "phrase": "floor rub round love came",
+                "realTime": 0.00414,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:23.771412",
+                "numFound": 6985,
+                "phrase": "floor rub round love came",
+                "realTime": 0.004381,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:23.820082",
+                "numFound": 6985,
+                "phrase": "floor rub round love came",
+                "realTime": 0.004028,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:23.888724",
+                "numFound": 71204,
+                "phrase": "off air voice large locate",
+                "realTime": 0.067852,
+                "solrQTime": 42
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:24.052563",
+                "numFound": 71204,
+                "phrase": "off air voice large locate",
+                "realTime": 0.007154,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:24.151148",
+                "numFound": 71204,
+                "phrase": "off air voice large locate",
+                "realTime": 0.008762,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:24.246279",
+                "numFound": 71204,
+                "phrase": "off air voice large locate",
+                "realTime": 0.007884,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:24.345291",
+                "numFound": 17032,
+                "phrase": "now control loud roll make",
+                "realTime": 0.038189,
+                "solrQTime": 28
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:24.456618",
+                "numFound": 17032,
+                "phrase": "now control loud roll make",
+                "realTime": 0.007214,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:24.529556",
+                "numFound": 17032,
+                "phrase": "now control loud roll make",
+                "realTime": 0.007348,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:24.617022",
+                "numFound": 17032,
+                "phrase": "now control loud roll make",
+                "realTime": 0.007835,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:24.692684",
+                "numFound": 21699,
+                "phrase": "women made does fruit shine",
+                "realTime": 0.037979,
+                "solrQTime": 32
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:25.202107",
+                "numFound": 21699,
+                "phrase": "women made does fruit shine",
+                "realTime": 0.006975,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:25.665877",
+                "numFound": 21699,
+                "phrase": "women made does fruit shine",
+                "realTime": 0.007448,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:26.090588",
+                "numFound": 21699,
+                "phrase": "women made does fruit shine",
+                "realTime": 0.006507,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:26.537808",
+                "numFound": 12036,
+                "phrase": "during team dog feel plant",
+                "realTime": 0.02145,
+                "solrQTime": 14
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:26.604689",
+                "numFound": 12036,
+                "phrase": "during team dog feel plant",
+                "realTime": 0.004686,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:26.648676",
+                "numFound": 12036,
+                "phrase": "during team dog feel plant",
+                "realTime": 0.004478,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:26.701699",
+                "numFound": 12036,
+                "phrase": "during team dog feel plant",
+                "realTime": 0.00403,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:26.745478",
+                "numFound": 11836,
+                "phrase": "cook still green boat sheet",
+                "realTime": 0.017124,
+                "solrQTime": 13
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:26.799497",
+                "numFound": 11836,
+                "phrase": "cook still green boat sheet",
+                "realTime": 0.004486,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:26.825224",
+                "numFound": 11836,
+                "phrase": "cook still green boat sheet",
+                "realTime": 0.004622,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:26.851568",
+                "numFound": 11836,
+                "phrase": "cook still green boat sheet",
+                "realTime": 0.004339,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:26.878337",
+                "numFound": 11072,
+                "phrase": "wild open string brought observe",
+                "realTime": 0.018958,
+                "solrQTime": 14
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:27.011340",
+                "numFound": 11072,
+                "phrase": "wild open string brought observe",
+                "realTime": 0.005397,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:27.047063",
+                "numFound": 11072,
+                "phrase": "wild open string brought observe",
+                "realTime": 0.004925,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:27.082467",
+                "numFound": 11072,
+                "phrase": "wild open string brought observe",
+                "realTime": 0.004417,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:27.126771",
+                "numFound": 17918,
+                "phrase": "first people more favor clothe",
+                "realTime": 0.022,
+                "solrQTime": 16
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:27.281257",
+                "numFound": 17918,
+                "phrase": "first people more favor clothe",
+                "realTime": 0.0053,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:27.364023",
+                "numFound": 17918,
+                "phrase": "first people more favor clothe",
+                "realTime": 0.005267,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:27.446231",
+                "numFound": 17918,
+                "phrase": "first people more favor clothe",
+                "realTime": 0.004718,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:27.534894",
+                "numFound": 7489,
+                "phrase": "allow shoulder control add share",
+                "realTime": 0.01628,
+                "solrQTime": 13
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:27.583572",
+                "numFound": 7489,
+                "phrase": "allow shoulder control add share",
+                "realTime": 0.004259,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:27.622324",
+                "numFound": 7489,
+                "phrase": "allow shoulder control add share",
+                "realTime": 0.004416,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:27.670002",
+                "numFound": 7489,
+                "phrase": "allow shoulder control add share",
+                "realTime": 0.004238,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:27.704814",
+                "numFound": 16290,
+                "phrase": "especially part build product bell",
+                "realTime": 0.021492,
+                "solrQTime": 14
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:27.789256",
+                "numFound": 16290,
+                "phrase": "especially part build product bell",
+                "realTime": 0.004882,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:27.842257",
+                "numFound": 16290,
+                "phrase": "especially part build product bell",
+                "realTime": 0.00514,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:27.893713",
+                "numFound": 16290,
+                "phrase": "especially part build product bell",
+                "realTime": 0.004627,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:27.944245",
+                "numFound": 14282,
+                "phrase": "baby yellow made especially nature",
+                "realTime": 0.018599,
+                "solrQTime": 14
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:28.004969",
+                "numFound": 14282,
+                "phrase": "baby yellow made especially nature",
+                "realTime": 0.005505,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:28.063481",
+                "numFound": 14282,
+                "phrase": "baby yellow made especially nature",
+                "realTime": 0.004637,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:28.109839",
+                "numFound": 14282,
+                "phrase": "baby yellow made especially nature",
+                "realTime": 0.005189,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:28.157981",
+                "numFound": 9747,
+                "phrase": "caught those century rather bar",
+                "realTime": 0.020739,
+                "solrQTime": 14
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:28.286708",
+                "numFound": 9747,
+                "phrase": "caught those century rather bar",
+                "realTime": 0.004202,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:28.389658",
+                "numFound": 9747,
+                "phrase": "caught those century rather bar",
+                "realTime": 0.004341,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:28.487247",
+                "numFound": 9747,
+                "phrase": "caught those century rather bar",
+                "realTime": 0.00404,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:28.589225",
+                "numFound": 9407,
+                "phrase": "three famous scale crop round",
+                "realTime": 0.015964,
+                "solrQTime": 12
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:28.650611",
+                "numFound": 9407,
+                "phrase": "three famous scale crop round",
+                "realTime": 0.004229,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:28.690655",
+                "numFound": 9407,
+                "phrase": "three famous scale crop round",
+                "realTime": 0.003918,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:28.731886",
+                "numFound": 9407,
+                "phrase": "three famous scale crop round",
+                "realTime": 0.004043,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:28.771994",
+                "numFound": 14897,
+                "phrase": "whether teach roll sit product",
+                "realTime": 0.015662,
+                "solrQTime": 12
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:28.853333",
+                "numFound": 14897,
+                "phrase": "whether teach roll sit product",
+                "realTime": 0.004157,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:28.896395",
+                "numFound": 14897,
+                "phrase": "whether teach roll sit product",
+                "realTime": 0.004058,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:28.939004",
+                "numFound": 14897,
+                "phrase": "whether teach roll sit product",
+                "realTime": 0.003785,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:28.982437",
+                "numFound": 5281,
+                "phrase": "land vowel master happen plant",
+                "realTime": 0.01486,
+                "solrQTime": 12
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:29.041615",
+                "numFound": 5281,
+                "phrase": "land vowel master happen plant",
+                "realTime": 0.004371,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:29.081833",
+                "numFound": 5281,
+                "phrase": "land vowel master happen plant",
+                "realTime": 0.003875,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:29.121513",
+                "numFound": 5281,
+                "phrase": "land vowel master happen plant",
+                "realTime": 0.003986,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:29.159796",
+                "numFound": 10225,
+                "phrase": "twenty check for train got",
+                "realTime": 0.022014,
+                "solrQTime": 11
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:29.252308",
+                "numFound": 10225,
+                "phrase": "twenty check for train got",
+                "realTime": 0.005104,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:29.309400",
+                "numFound": 10225,
+                "phrase": "twenty check for train got",
+                "realTime": 0.004409,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:29.362494",
+                "numFound": 10225,
+                "phrase": "twenty check for train got",
+                "realTime": 0.006137,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:29.479236",
+                "numFound": 5997,
+                "phrase": "roll gas hair does sat",
+                "realTime": 0.028569,
+                "solrQTime": 21
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:29.646730",
+                "numFound": 5997,
+                "phrase": "roll gas hair does sat",
+                "realTime": 0.006701,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:29.725261",
+                "numFound": 5997,
+                "phrase": "roll gas hair does sat",
+                "realTime": 0.007546,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:29.801033",
+                "numFound": 5997,
+                "phrase": "roll gas hair does sat",
+                "realTime": 0.008073,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:29.877836",
+                "numFound": 8327,
+                "phrase": "ship death old shoe talk",
+                "realTime": 0.027627,
+                "solrQTime": 22
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:30.015975",
+                "numFound": 8327,
+                "phrase": "ship death old shoe talk",
+                "realTime": 0.012954,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:30.158794",
+                "numFound": 8327,
+                "phrase": "ship death old shoe talk",
+                "realTime": 0.00636,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:30.275746",
+                "numFound": 8327,
+                "phrase": "ship death old shoe talk",
+                "realTime": 0.006327,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:30.402585",
+                "numFound": 102738,
+                "phrase": "began watch put finish don't",
+                "realTime": 0.058814,
+                "solrQTime": 52
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:30.514249",
+                "numFound": 102738,
+                "phrase": "began watch put finish don't",
+                "realTime": 0.007023,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:30.557316",
+                "numFound": 102738,
+                "phrase": "began watch put finish don't",
+                "realTime": 0.006238,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:30.599333",
+                "numFound": 102738,
+                "phrase": "began watch put finish don't",
+                "realTime": 0.006201,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:30.639771",
+                "numFound": 14668,
+                "phrase": "term order river until school",
+                "realTime": 0.02943,
+                "solrQTime": 23
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:30.753884",
+                "numFound": 14668,
+                "phrase": "term order river until school",
+                "realTime": 0.005453,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:30.837627",
+                "numFound": 14668,
+                "phrase": "term order river until school",
+                "realTime": 0.007075,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:30.912026",
+                "numFound": 14668,
+                "phrase": "term order river until school",
+                "realTime": 0.004602,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:30.967799",
+                "numFound": 15099,
+                "phrase": "turn total protect part simple",
+                "realTime": 0.02236,
+                "solrQTime": 14
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:31.064501",
+                "numFound": 15099,
+                "phrase": "turn total protect part simple",
+                "realTime": 0.004097,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:31.121881",
+                "numFound": 15099,
+                "phrase": "turn total protect part simple",
+                "realTime": 0.004183,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:31.174160",
+                "numFound": 15099,
+                "phrase": "turn total protect part simple",
+                "realTime": 0.003815,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:31.227835",
+                "numFound": 10650,
+                "phrase": "observe end loud science crowd",
+                "realTime": 0.018285,
+                "solrQTime": 13
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:31.291918",
+                "numFound": 10650,
+                "phrase": "observe end loud science crowd",
+                "realTime": 0.003875,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:31.346633",
+                "numFound": 10650,
+                "phrase": "observe end loud science crowd",
+                "realTime": 0.003906,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:31.391702",
+                "numFound": 10650,
+                "phrase": "observe end loud science crowd",
+                "realTime": 0.003876,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:31.440174",
+                "numFound": 9444,
+                "phrase": "type quite distant die since",
+                "realTime": 0.018173,
+                "solrQTime": 13
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:31.540843",
+                "numFound": 9444,
+                "phrase": "type quite distant die since",
+                "realTime": 0.00451,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:31.593520",
+                "numFound": 9444,
+                "phrase": "type quite distant die since",
+                "realTime": 0.004692,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:31.644865",
+                "numFound": 9444,
+                "phrase": "type quite distant die since",
+                "realTime": 0.004261,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-18 15:26:31.698057",
+                "numFound": 28841,
+                "phrase": "there our degree period reply",
+                "realTime": 0.02078,
+                "solrQTime": 15
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:31.820512",
+                "numFound": 28841,
+                "phrase": "there our degree period reply",
+                "realTime": 0.0041,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:31.915196",
+                "numFound": 28841,
+                "phrase": "there our degree period reply",
+                "realTime": 0.007114,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-12-18 15:26:32.055579",
+                "numFound": 28841,
+                "phrase": "there our degree period reply",
+                "realTime": 0.008948,
+                "solrQTime": 1
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 17581.366666666665,
+        "max": 102738,
+        "min": 5281
+    },
+    "summary": {
+        "environment": "STAGE",
+        "environment uri": "http://compass-fedora-stage.fivecolleges.edu:8080/solr/collection1/",
+        "first (unique) time avg": 18.666666666666668,
+        "last (cached) time avg": 1.0333333333333334,
+        "numFound ave": 17581.366666666665,
+        "numFound max": 102738,
+        "numFound min": 5281,
+        "test end time": "2018-12-18 15:26:32.199605",
+        "test start time": "2018-12-18 15:26:20.544686"
+    }
+}

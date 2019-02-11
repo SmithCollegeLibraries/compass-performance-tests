@@ -1,0 +1,932 @@
+{
+    "averagesRealTime": [
+        0.06566480000000001,
+        0.024232233333333335,
+        0.015490066666666665,
+        0.020032666666666667
+    ],
+    "averagesSolrQTime": [
+        53.7,
+        14.566666666666666,
+        7.2,
+        12.666666666666666
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:22.275430",
+                "numFound": 25745,
+                "phrase": "team coat burn happen between",
+                "realTime": 0.069931,
+                "solrQTime": 54
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:22.500409",
+                "numFound": 25745,
+                "phrase": "team coat burn happen between",
+                "realTime": 0.009403,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:22.632596",
+                "numFound": 25745,
+                "phrase": "team coat burn happen between",
+                "realTime": 0.063028,
+                "solrQTime": 53
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:22.853358",
+                "numFound": 25745,
+                "phrase": "team coat burn happen between",
+                "realTime": 0.006032,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:22.958585",
+                "numFound": 83390,
+                "phrase": "poor animal nation could music",
+                "realTime": 0.049262,
+                "solrQTime": 41
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:23.201658",
+                "numFound": 83390,
+                "phrase": "poor animal nation could music",
+                "realTime": 0.050625,
+                "solrQTime": 43
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:23.481523",
+                "numFound": 83390,
+                "phrase": "poor animal nation could music",
+                "realTime": 0.008056,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:23.683244",
+                "numFound": 83390,
+                "phrase": "poor animal nation could music",
+                "realTime": 0.00779,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:23.884436",
+                "numFound": 33917,
+                "phrase": "whose colony wire during hard",
+                "realTime": 0.083835,
+                "solrQTime": 46
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:24.180906",
+                "numFound": 33917,
+                "phrase": "whose colony wire during hard",
+                "realTime": 0.095542,
+                "solrQTime": 72
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:24.567034",
+                "numFound": 33917,
+                "phrase": "whose colony wire during hard",
+                "realTime": 0.006552,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:24.702509",
+                "numFound": 33917,
+                "phrase": "whose colony wire during hard",
+                "realTime": 0.006948,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:24.851357",
+                "numFound": 40422,
+                "phrase": "food crease sister laugh end",
+                "realTime": 0.060037,
+                "solrQTime": 50
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:25.142468",
+                "numFound": 40422,
+                "phrase": "food crease sister laugh end",
+                "realTime": 0.047941,
+                "solrQTime": 37
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:25.384149",
+                "numFound": 40422,
+                "phrase": "food crease sister laugh end",
+                "realTime": 0.006137,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:25.530294",
+                "numFound": 40422,
+                "phrase": "food crease sister laugh end",
+                "realTime": 0.006662,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:25.682722",
+                "numFound": 27640,
+                "phrase": "coat slave flat finger number",
+                "realTime": 0.027465,
+                "solrQTime": 21
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:25.810382",
+                "numFound": 27640,
+                "phrase": "coat slave flat finger number",
+                "realTime": 0.005961,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:25.889658",
+                "numFound": 27640,
+                "phrase": "coat slave flat finger number",
+                "realTime": 0.005612,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:25.965965",
+                "numFound": 27640,
+                "phrase": "coat slave flat finger number",
+                "realTime": 0.006278,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:26.040665",
+                "numFound": 41570,
+                "phrase": "read colony consider seven ring",
+                "realTime": 0.028523,
+                "solrQTime": 23
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:26.177744",
+                "numFound": 41570,
+                "phrase": "read colony consider seven ring",
+                "realTime": 0.031385,
+                "solrQTime": 26
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:26.293380",
+                "numFound": 41570,
+                "phrase": "read colony consider seven ring",
+                "realTime": 0.012033,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:26.406263",
+                "numFound": 41570,
+                "phrase": "read colony consider seven ring",
+                "realTime": 0.008116,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:26.528266",
+                "numFound": 39637,
+                "phrase": "small total same wood wash",
+                "realTime": 0.058385,
+                "solrQTime": 50
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:26.665087",
+                "numFound": 39637,
+                "phrase": "small total same wood wash",
+                "realTime": 0.007697,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:26.740608",
+                "numFound": 39637,
+                "phrase": "small total same wood wash",
+                "realTime": 0.007538,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:26.824698",
+                "numFound": 39637,
+                "phrase": "small total same wood wash",
+                "realTime": 0.007922,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:26.922774",
+                "numFound": 213181,
+                "phrase": "lost page brown room can",
+                "realTime": 0.181629,
+                "solrQTime": 167
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:27.350759",
+                "numFound": 213181,
+                "phrase": "lost page brown room can",
+                "realTime": 0.149861,
+                "solrQTime": 139
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:27.696245",
+                "numFound": 213181,
+                "phrase": "lost page brown room can",
+                "realTime": 0.007778,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:27.914294",
+                "numFound": 213181,
+                "phrase": "lost page brown room can",
+                "realTime": 0.142288,
+                "solrQTime": 130
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:28.273495",
+                "numFound": 22884,
+                "phrase": "area soft edge mark quiet",
+                "realTime": 0.066224,
+                "solrQTime": 56
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:28.482701",
+                "numFound": 22884,
+                "phrase": "area soft edge mark quiet",
+                "realTime": 0.022844,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:28.620597",
+                "numFound": 22884,
+                "phrase": "area soft edge mark quiet",
+                "realTime": 0.005852,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:28.741277",
+                "numFound": 22884,
+                "phrase": "area soft edge mark quiet",
+                "realTime": 0.006236,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:28.864923",
+                "numFound": 55730,
+                "phrase": "brought very nothing law famous",
+                "realTime": 0.065926,
+                "solrQTime": 55
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:29.043806",
+                "numFound": 55730,
+                "phrase": "brought very nothing law famous",
+                "realTime": 0.052124,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:29.216172",
+                "numFound": 55730,
+                "phrase": "brought very nothing law famous",
+                "realTime": 0.007674,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:29.333599",
+                "numFound": 55730,
+                "phrase": "brought very nothing law famous",
+                "realTime": 0.007278,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:29.434426",
+                "numFound": 36430,
+                "phrase": "why flower side value job",
+                "realTime": 0.060163,
+                "solrQTime": 47
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:29.638291",
+                "numFound": 36430,
+                "phrase": "why flower side value job",
+                "realTime": 0.054854,
+                "solrQTime": 43
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:29.823709",
+                "numFound": 36430,
+                "phrase": "why flower side value job",
+                "realTime": 0.011082,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:29.944616",
+                "numFound": 36430,
+                "phrase": "why flower side value job",
+                "realTime": 0.011014,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:30.070501",
+                "numFound": 48997,
+                "phrase": "add than gather side warm",
+                "realTime": 0.071541,
+                "solrQTime": 65
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:30.236187",
+                "numFound": 48997,
+                "phrase": "add than gather side warm",
+                "realTime": 0.011508,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:30.356465",
+                "numFound": 48997,
+                "phrase": "add than gather side warm",
+                "realTime": 0.006788,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:30.444586",
+                "numFound": 48997,
+                "phrase": "add than gather side warm",
+                "realTime": 0.052254,
+                "solrQTime": 43
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:30.587136",
+                "numFound": 64860,
+                "phrase": "cloud pass down very read",
+                "realTime": 0.085774,
+                "solrQTime": 74
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:30.800338",
+                "numFound": 64860,
+                "phrase": "cloud pass down very read",
+                "realTime": 0.007823,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:30.915346",
+                "numFound": 64860,
+                "phrase": "cloud pass down very read",
+                "realTime": 0.008732,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:31.063959",
+                "numFound": 64860,
+                "phrase": "cloud pass down very read",
+                "realTime": 0.010403,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:31.205903",
+                "numFound": 43830,
+                "phrase": "nine over mine black period",
+                "realTime": 0.052049,
+                "solrQTime": 43
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:31.415664",
+                "numFound": 43830,
+                "phrase": "nine over mine black period",
+                "realTime": 0.060756,
+                "solrQTime": 52
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:31.630026",
+                "numFound": 43830,
+                "phrase": "nine over mine black period",
+                "realTime": 0.012881,
+                "solrQTime": 3
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:31.785170",
+                "numFound": 43830,
+                "phrase": "nine over mine black period",
+                "realTime": 0.006759,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:31.917726",
+                "numFound": 69955,
+                "phrase": "most minute first tube field",
+                "realTime": 0.106724,
+                "solrQTime": 91
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:32.279913",
+                "numFound": 69955,
+                "phrase": "most minute first tube field",
+                "realTime": 0.007935,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:32.480565",
+                "numFound": 69955,
+                "phrase": "most minute first tube field",
+                "realTime": 0.011147,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:32.738792",
+                "numFound": 69955,
+                "phrase": "most minute first tube field",
+                "realTime": 0.091787,
+                "solrQTime": 81
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:33.059821",
+                "numFound": 18622,
+                "phrase": "middle circle mountain captain center",
+                "realTime": 0.048311,
+                "solrQTime": 36
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:33.252141",
+                "numFound": 18622,
+                "phrase": "middle circle mountain captain center",
+                "realTime": 0.007405,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:33.388440",
+                "numFound": 18622,
+                "phrase": "middle circle mountain captain center",
+                "realTime": 0.011056,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:33.516478",
+                "numFound": 18622,
+                "phrase": "middle circle mountain captain center",
+                "realTime": 0.031766,
+                "solrQTime": 24
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:33.692356",
+                "numFound": 40982,
+                "phrase": "serve south spread father differ",
+                "realTime": 0.053304,
+                "solrQTime": 44
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:33.895330",
+                "numFound": 40982,
+                "phrase": "serve south spread father differ",
+                "realTime": 0.008491,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:34.016692",
+                "numFound": 40982,
+                "phrase": "serve south spread father differ",
+                "realTime": 0.006607,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:34.141141",
+                "numFound": 40982,
+                "phrase": "serve south spread father differ",
+                "realTime": 0.007016,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:34.261613",
+                "numFound": 56425,
+                "phrase": "rule rail see gone pair",
+                "realTime": 0.067898,
+                "solrQTime": 56
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:34.404352",
+                "numFound": 56425,
+                "phrase": "rule rail see gone pair",
+                "realTime": 0.00971,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:34.485925",
+                "numFound": 56425,
+                "phrase": "rule rail see gone pair",
+                "realTime": 0.007576,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:34.554613",
+                "numFound": 56425,
+                "phrase": "rule rail see gone pair",
+                "realTime": 0.007716,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:34.629532",
+                "numFound": 20852,
+                "phrase": "figure wrong third sight gone",
+                "realTime": 0.061663,
+                "solrQTime": 38
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:34.839665",
+                "numFound": 20852,
+                "phrase": "figure wrong third sight gone",
+                "realTime": 0.006826,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:34.961118",
+                "numFound": 20852,
+                "phrase": "figure wrong third sight gone",
+                "realTime": 0.00687,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:35.082634",
+                "numFound": 20852,
+                "phrase": "figure wrong third sight gone",
+                "realTime": 0.008191,
+                "solrQTime": 2
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:35.240146",
+                "numFound": 193791,
+                "phrase": "hit consider lie find root",
+                "realTime": 0.140927,
+                "solrQTime": 132
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:35.451795",
+                "numFound": 193791,
+                "phrase": "hit consider lie find root",
+                "realTime": 0.007102,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:35.521703",
+                "numFound": 193791,
+                "phrase": "hit consider lie find root",
+                "realTime": 0.008598,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:35.599433",
+                "numFound": 193791,
+                "phrase": "hit consider lie find root",
+                "realTime": 0.006397,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:35.677205",
+                "numFound": 33921,
+                "phrase": "often head wood change happy",
+                "realTime": 0.072583,
+                "solrQTime": 61
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:35.903685",
+                "numFound": 33921,
+                "phrase": "often head wood change happy",
+                "realTime": 0.008375,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:36.047354",
+                "numFound": 33921,
+                "phrase": "often head wood change happy",
+                "realTime": 0.062911,
+                "solrQTime": 50
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:36.393626",
+                "numFound": 33921,
+                "phrase": "often head wood change happy",
+                "realTime": 0.010714,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:36.546298",
+                "numFound": 22145,
+                "phrase": "green suffix stone above difficult",
+                "realTime": 0.058759,
+                "solrQTime": 42
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:36.780310",
+                "numFound": 22145,
+                "phrase": "green suffix stone above difficult",
+                "realTime": 0.008446,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:36.933706",
+                "numFound": 22145,
+                "phrase": "green suffix stone above difficult",
+                "realTime": 0.007437,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:37.089750",
+                "numFound": 22145,
+                "phrase": "green suffix stone above difficult",
+                "realTime": 0.059229,
+                "solrQTime": 44
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:37.340843",
+                "numFound": 72302,
+                "phrase": "guess size was course sand",
+                "realTime": 0.035741,
+                "solrQTime": 28
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:37.467452",
+                "numFound": 72302,
+                "phrase": "guess size was course sand",
+                "realTime": 0.006575,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:37.557044",
+                "numFound": 72302,
+                "phrase": "guess size was course sand",
+                "realTime": 0.005411,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:37.654408",
+                "numFound": 72302,
+                "phrase": "guess size was course sand",
+                "realTime": 0.006314,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:37.736969",
+                "numFound": 36545,
+                "phrase": "him die cry how phrase",
+                "realTime": 0.04501,
+                "solrQTime": 35
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:37.930652",
+                "numFound": 36545,
+                "phrase": "him die cry how phrase",
+                "realTime": 0.005801,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:38.076730",
+                "numFound": 36545,
+                "phrase": "him die cry how phrase",
+                "realTime": 0.012503,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:38.215523",
+                "numFound": 36545,
+                "phrase": "him die cry how phrase",
+                "realTime": 0.00583,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:38.364698",
+                "numFound": 35429,
+                "phrase": "hill correct the men touch",
+                "realTime": 0.030085,
+                "solrQTime": 20
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:38.498830",
+                "numFound": 35429,
+                "phrase": "hill correct the men touch",
+                "realTime": 0.007414,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:38.591028",
+                "numFound": 35429,
+                "phrase": "hill correct the men touch",
+                "realTime": 0.005791,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:38.681352",
+                "numFound": 35429,
+                "phrase": "hill correct the men touch",
+                "realTime": 0.006308,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:38.779622",
+                "numFound": 26840,
+                "phrase": "fine value chart force ground",
+                "realTime": 0.063059,
+                "solrQTime": 52
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:39.026701",
+                "numFound": 26840,
+                "phrase": "fine value chart force ground",
+                "realTime": 0.006452,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:39.209126",
+                "numFound": 26840,
+                "phrase": "fine value chart force ground",
+                "realTime": 0.068743,
+                "solrQTime": 48
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:39.452568",
+                "numFound": 26840,
+                "phrase": "fine value chart force ground",
+                "realTime": 0.008884,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:39.622005",
+                "numFound": 29179,
+                "phrase": "learn heard gone beauty complete",
+                "realTime": 0.074892,
+                "solrQTime": 68
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:39.777995",
+                "numFound": 29179,
+                "phrase": "learn heard gone beauty complete",
+                "realTime": 0.006294,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:39.864136",
+                "numFound": 29179,
+                "phrase": "learn heard gone beauty complete",
+                "realTime": 0.041278,
+                "solrQTime": 34
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:39.996022",
+                "numFound": 29179,
+                "phrase": "learn heard gone beauty complete",
+                "realTime": 0.007036,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:40.074458",
+                "numFound": 15796,
+                "phrase": "expect insect lie chick electric",
+                "realTime": 0.036918,
+                "solrQTime": 26
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:40.233455",
+                "numFound": 15796,
+                "phrase": "expect insect lie chick electric",
+                "realTime": 0.007774,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:40.325912",
+                "numFound": 15796,
+                "phrase": "expect insect lie chick electric",
+                "realTime": 0.019935,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:40.436803",
+                "numFound": 15796,
+                "phrase": "expect insect lie chick electric",
+                "realTime": 0.006693,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:40.528430",
+                "numFound": 50991,
+                "phrase": "mark dear check city cool",
+                "realTime": 0.053503,
+                "solrQTime": 42
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:40.725651",
+                "numFound": 50991,
+                "phrase": "mark dear check city cool",
+                "realTime": 0.005874,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:40.846477",
+                "numFound": 50991,
+                "phrase": "mark dear check city cool",
+                "realTime": 0.012475,
+                "solrQTime": 2
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:40.975991",
+                "numFound": 50991,
+                "phrase": "mark dear check city cool",
+                "realTime": 0.007255,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2018-12-17 14:45:41.093095",
+                "numFound": 15386,
+                "phrase": "colony charge check milk speed",
+                "realTime": 0.059823,
+                "solrQTime": 48
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:41.248689",
+                "numFound": 15386,
+                "phrase": "colony charge check milk speed",
+                "realTime": 0.008169,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:41.343427",
+                "numFound": 15386,
+                "phrase": "colony charge check milk speed",
+                "realTime": 0.006621,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2018-12-17 14:45:41.426808",
+                "numFound": 15386,
+                "phrase": "colony charge check milk speed",
+                "realTime": 0.043864,
+                "solrQTime": 33
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 50579.8,
+        "max": 213181,
+        "min": 15386
+    },
+    "summary": {
+        "environment": "PROD",
+        "environment uri": "http://compass-fedora-prod.fivecolleges.edu:8080/solr/collection1/",
+        "first (unique) time avg": 53.7,
+        "last (cached) time avg": 12.666666666666666,
+        "numFound ave": 50579.8,
+        "numFound max": 213181,
+        "numFound min": 15386,
+        "test end time": "2018-12-17 14:45:41.580212",
+        "test start time": "2018-12-17 14:45:22.274698"
+    }
+}
