@@ -1,0 +1,932 @@
+{
+    "averagesRealTime": [
+        0.0755527,
+        0.0033118333333333337,
+        0.0033645333333333334,
+        0.0034319666666666666
+    ],
+    "averagesSolrQTime": [
+        70.16666666666667,
+        0.36666666666666664,
+        0.5666666666666667,
+        0.4666666666666667
+    ],
+    "data": [
+        [
+            {
+                "datesStamp": "2019-03-07 17:49:58.404869",
+                "numFound": 166581,
+                "phrase": "wire play pound position support",
+                "realTime": 0.056787,
+                "solrQTime": 49
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:58.541467",
+                "numFound": 166581,
+                "phrase": "wire play pound position support",
+                "realTime": 0.003582,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:58.609117",
+                "numFound": 166581,
+                "phrase": "wire play pound position support",
+                "realTime": 0.003357,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:58.686156",
+                "numFound": 166581,
+                "phrase": "wire play pound position support",
+                "realTime": 0.003319,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:49:58.753286",
+                "numFound": 79417,
+                "phrase": "determine kept anger crop sea",
+                "realTime": 0.030383,
+                "solrQTime": 27
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:58.817215",
+                "numFound": 79417,
+                "phrase": "determine kept anger crop sea",
+                "realTime": 0.003352,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:58.853063",
+                "numFound": 79417,
+                "phrase": "determine kept anger crop sea",
+                "realTime": 0.003274,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:58.888722",
+                "numFound": 79417,
+                "phrase": "determine kept anger crop sea",
+                "realTime": 0.00296,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:49:58.923190",
+                "numFound": 869018,
+                "phrase": "part for collect them shop",
+                "realTime": 0.202472,
+                "solrQTime": 199
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:59.165862",
+                "numFound": 869018,
+                "phrase": "part for collect them shop",
+                "realTime": 0.003753,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:59.210328",
+                "numFound": 869018,
+                "phrase": "part for collect them shop",
+                "realTime": 0.002878,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:59.235524",
+                "numFound": 869018,
+                "phrase": "part for collect them shop",
+                "realTime": 0.002923,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:49:59.261423",
+                "numFound": 255960,
+                "phrase": "liquid some quick rule soon",
+                "realTime": 0.089129,
+                "solrQTime": 85
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:59.377683",
+                "numFound": 255960,
+                "phrase": "liquid some quick rule soon",
+                "realTime": 0.003001,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:59.403818",
+                "numFound": 255960,
+                "phrase": "liquid some quick rule soon",
+                "realTime": 0.00287,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:59.429836",
+                "numFound": 255960,
+                "phrase": "liquid some quick rule soon",
+                "realTime": 0.002543,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:49:59.455297",
+                "numFound": 180697,
+                "phrase": "nor hot teeth evening indicate",
+                "realTime": 0.053572,
+                "solrQTime": 50
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:59.553790",
+                "numFound": 180697,
+                "phrase": "nor hot teeth evening indicate",
+                "realTime": 0.003334,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:59.611389",
+                "numFound": 180697,
+                "phrase": "nor hot teeth evening indicate",
+                "realTime": 0.00281,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:59.651053",
+                "numFound": 180697,
+                "phrase": "nor hot teeth evening indicate",
+                "realTime": 0.004744,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:49:59.693758",
+                "numFound": 38127,
+                "phrase": "for chart column plant fresh",
+                "realTime": 0.028043,
+                "solrQTime": 23
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:59.784014",
+                "numFound": 38127,
+                "phrase": "for chart column plant fresh",
+                "realTime": 0.00289,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:59.831379",
+                "numFound": 38127,
+                "phrase": "for chart column plant fresh",
+                "realTime": 0.003578,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:49:59.879262",
+                "numFound": 38127,
+                "phrase": "for chart column plant fresh",
+                "realTime": 0.003697,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:49:59.927489",
+                "numFound": 79953,
+                "phrase": "row circle love bone sister",
+                "realTime": 0.032553,
+                "solrQTime": 29
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:00.007590",
+                "numFound": 79953,
+                "phrase": "row circle love bone sister",
+                "realTime": 0.003324,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:00.043374",
+                "numFound": 79953,
+                "phrase": "row circle love bone sister",
+                "realTime": 0.00365,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:00.079421",
+                "numFound": 79953,
+                "phrase": "row circle love bone sister",
+                "realTime": 0.003133,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:00.114915",
+                "numFound": 119829,
+                "phrase": "said symbol neighbor spread vary",
+                "realTime": 0.03999,
+                "solrQTime": 35
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:00.270940",
+                "numFound": 119829,
+                "phrase": "said symbol neighbor spread vary",
+                "realTime": 0.003083,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:00.359690",
+                "numFound": 119829,
+                "phrase": "said symbol neighbor spread vary",
+                "realTime": 0.003299,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:00.449773",
+                "numFound": 119829,
+                "phrase": "said symbol neighbor spread vary",
+                "realTime": 0.004232,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:00.546557",
+                "numFound": 226131,
+                "phrase": "change hold led check right",
+                "realTime": 0.085697,
+                "solrQTime": 74
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:00.706841",
+                "numFound": 226131,
+                "phrase": "change hold led check right",
+                "realTime": 0.003418,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:00.769522",
+                "numFound": 226131,
+                "phrase": "change hold led check right",
+                "realTime": 0.003337,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:00.832866",
+                "numFound": 226131,
+                "phrase": "change hold led check right",
+                "realTime": 0.00313,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:00.896105",
+                "numFound": 247113,
+                "phrase": "chair instant happy represent interest",
+                "realTime": 0.097772,
+                "solrQTime": 93
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:01.034393",
+                "numFound": 247113,
+                "phrase": "chair instant happy represent interest",
+                "realTime": 0.003223,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:01.069838",
+                "numFound": 247113,
+                "phrase": "chair instant happy represent interest",
+                "realTime": 0.003746,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:01.116047",
+                "numFound": 247113,
+                "phrase": "chair instant happy represent interest",
+                "realTime": 0.003468,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:01.160211",
+                "numFound": 74009,
+                "phrase": "sea suffix distant reach tone",
+                "realTime": 0.046523,
+                "solrQTime": 42
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:01.243164",
+                "numFound": 74009,
+                "phrase": "sea suffix distant reach tone",
+                "realTime": 0.003324,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:01.280150",
+                "numFound": 74009,
+                "phrase": "sea suffix distant reach tone",
+                "realTime": 0.002983,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:01.320824",
+                "numFound": 74009,
+                "phrase": "sea suffix distant reach tone",
+                "realTime": 0.003187,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:01.359999",
+                "numFound": 295097,
+                "phrase": "talk select certain first share",
+                "realTime": 0.096317,
+                "solrQTime": 90
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:01.639824",
+                "numFound": 295097,
+                "phrase": "talk select certain first share",
+                "realTime": 0.003389,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:01.790921",
+                "numFound": 295097,
+                "phrase": "talk select certain first share",
+                "realTime": 0.003345,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:01.930688",
+                "numFound": 295097,
+                "phrase": "talk select certain first share",
+                "realTime": 0.003736,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:02.075699",
+                "numFound": 214653,
+                "phrase": "while atom compare sing special",
+                "realTime": 0.067302,
+                "solrQTime": 58
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:02.184094",
+                "numFound": 214653,
+                "phrase": "while atom compare sing special",
+                "realTime": 0.003333,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:02.224884",
+                "numFound": 214653,
+                "phrase": "while atom compare sing special",
+                "realTime": 0.003359,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:02.265921",
+                "numFound": 214653,
+                "phrase": "while atom compare sing special",
+                "realTime": 0.003579,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:02.317802",
+                "numFound": 187388,
+                "phrase": "property open again copy then",
+                "realTime": 0.055849,
+                "solrQTime": 52
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:02.409261",
+                "numFound": 187388,
+                "phrase": "property open again copy then",
+                "realTime": 0.003107,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:02.443976",
+                "numFound": 187388,
+                "phrase": "property open again copy then",
+                "realTime": 0.002989,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:02.480984",
+                "numFound": 187388,
+                "phrase": "property open again copy then",
+                "realTime": 0.002934,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:02.517237",
+                "numFound": 142743,
+                "phrase": "old complete sure shine fat",
+                "realTime": 0.087774,
+                "solrQTime": 83
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:02.639476",
+                "numFound": 142743,
+                "phrase": "old complete sure shine fat",
+                "realTime": 0.004319,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:02.670779",
+                "numFound": 142743,
+                "phrase": "old complete sure shine fat",
+                "realTime": 0.003483,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:02.715908",
+                "numFound": 142743,
+                "phrase": "old complete sure shine fat",
+                "realTime": 0.003265,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:02.745534",
+                "numFound": 241768,
+                "phrase": "thing happen still reach age",
+                "realTime": 0.079529,
+                "solrQTime": 76
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:02.861639",
+                "numFound": 241768,
+                "phrase": "thing happen still reach age",
+                "realTime": 0.003028,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:02.898752",
+                "numFound": 241768,
+                "phrase": "thing happen still reach age",
+                "realTime": 0.003046,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:02.935625",
+                "numFound": 241768,
+                "phrase": "thing happen still reach age",
+                "realTime": 0.003325,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:02.973735",
+                "numFound": 171003,
+                "phrase": "little capital coat head toward",
+                "realTime": 0.057861,
+                "solrQTime": 53
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:03.080950",
+                "numFound": 171003,
+                "phrase": "little capital coat head toward",
+                "realTime": 0.003411,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:03.131275",
+                "numFound": 171003,
+                "phrase": "little capital coat head toward",
+                "realTime": 0.003263,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:03.184144",
+                "numFound": 171003,
+                "phrase": "little capital coat head toward",
+                "realTime": 0.003281,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:03.226690",
+                "numFound": 431221,
+                "phrase": "study major happen group can",
+                "realTime": 0.15425,
+                "solrQTime": 144
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:03.453637",
+                "numFound": 431221,
+                "phrase": "study major happen group can",
+                "realTime": 0.003127,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:03.517093",
+                "numFound": 431221,
+                "phrase": "study major happen group can",
+                "realTime": 0.003464,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:03.582096",
+                "numFound": 431221,
+                "phrase": "study major happen group can",
+                "realTime": 0.003528,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:03.650669",
+                "numFound": 212353,
+                "phrase": "silver never shout only wife",
+                "realTime": 0.084511,
+                "solrQTime": 78
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:03.810971",
+                "numFound": 212353,
+                "phrase": "silver never shout only wife",
+                "realTime": 0.003267,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:03.877683",
+                "numFound": 212353,
+                "phrase": "silver never shout only wife",
+                "realTime": 0.003052,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:03.936646",
+                "numFound": 212353,
+                "phrase": "silver never shout only wife",
+                "realTime": 0.003218,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:03.997047",
+                "numFound": 229155,
+                "phrase": "high bread mean put perhaps",
+                "realTime": 0.074377,
+                "solrQTime": 70
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:04.105942",
+                "numFound": 229155,
+                "phrase": "high bread mean put perhaps",
+                "realTime": 0.003163,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:04.138114",
+                "numFound": 229155,
+                "phrase": "high bread mean put perhaps",
+                "realTime": 0.003927,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:04.170351",
+                "numFound": 229155,
+                "phrase": "high bread mean put perhaps",
+                "realTime": 0.002928,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:04.210201",
+                "numFound": 210322,
+                "phrase": "part inch night rose truck",
+                "realTime": 0.057824,
+                "solrQTime": 54
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:04.305125",
+                "numFound": 210322,
+                "phrase": "part inch night rose truck",
+                "realTime": 0.003512,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:04.340300",
+                "numFound": 210322,
+                "phrase": "part inch night rose truck",
+                "realTime": 0.003085,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:04.373753",
+                "numFound": 210322,
+                "phrase": "part inch night rose truck",
+                "realTime": 0.003333,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:04.409859",
+                "numFound": 130325,
+                "phrase": "perhaps either head level range",
+                "realTime": 0.048882,
+                "solrQTime": 43
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:04.501886",
+                "numFound": 130325,
+                "phrase": "perhaps either head level range",
+                "realTime": 0.003536,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:04.542193",
+                "numFound": 130325,
+                "phrase": "perhaps either head level range",
+                "realTime": 0.004266,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:04.592863",
+                "numFound": 130325,
+                "phrase": "perhaps either head level range",
+                "realTime": 0.003042,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:04.632989",
+                "numFound": 248546,
+                "phrase": "call mile through noise dance",
+                "realTime": 0.076698,
+                "solrQTime": 71
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:04.787509",
+                "numFound": 248546,
+                "phrase": "call mile through noise dance",
+                "realTime": 0.003306,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:04.850088",
+                "numFound": 248546,
+                "phrase": "call mile through noise dance",
+                "realTime": 0.002966,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:04.909257",
+                "numFound": 248546,
+                "phrase": "call mile through noise dance",
+                "realTime": 0.003017,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:04.970203",
+                "numFound": 833932,
+                "phrase": "reply star root dress big",
+                "realTime": 0.147591,
+                "solrQTime": 143
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:05.157685",
+                "numFound": 833932,
+                "phrase": "reply star root dress big",
+                "realTime": 0.003113,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:05.204606",
+                "numFound": 833932,
+                "phrase": "reply star root dress big",
+                "realTime": 0.002991,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:05.240939",
+                "numFound": 833932,
+                "phrase": "reply star root dress big",
+                "realTime": 0.003309,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:05.274403",
+                "numFound": 152672,
+                "phrase": "paint good shine truck design",
+                "realTime": 0.044967,
+                "solrQTime": 41
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:05.373466",
+                "numFound": 152672,
+                "phrase": "paint good shine truck design",
+                "realTime": 0.003152,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:05.415182",
+                "numFound": 152672,
+                "phrase": "paint good shine truck design",
+                "realTime": 0.002857,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:05.454573",
+                "numFound": 152672,
+                "phrase": "paint good shine truck design",
+                "realTime": 0.003262,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:05.495129",
+                "numFound": 259412,
+                "phrase": "oil nature her wing look",
+                "realTime": 0.079727,
+                "solrQTime": 74
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:05.656885",
+                "numFound": 259412,
+                "phrase": "oil nature her wing look",
+                "realTime": 0.003373,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:05.726905",
+                "numFound": 259412,
+                "phrase": "oil nature her wing look",
+                "realTime": 0.003209,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:05.797561",
+                "numFound": 259412,
+                "phrase": "oil nature her wing look",
+                "realTime": 0.004435,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:05.869307",
+                "numFound": 106195,
+                "phrase": "wood property least sound search",
+                "realTime": 0.039204,
+                "solrQTime": 34
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:05.978202",
+                "numFound": 106195,
+                "phrase": "wood property least sound search",
+                "realTime": 0.003207,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:06.055182",
+                "numFound": 106195,
+                "phrase": "wood property least sound search",
+                "realTime": 0.003689,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:06.135182",
+                "numFound": 106195,
+                "phrase": "wood property least sound search",
+                "realTime": 0.005641,
+                "solrQTime": 1
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:06.205313",
+                "numFound": 169908,
+                "phrase": "star dictionary raise short industry",
+                "realTime": 0.057995,
+                "solrQTime": 55
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:06.424156",
+                "numFound": 169908,
+                "phrase": "star dictionary raise short industry",
+                "realTime": 0.003131,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:06.548168",
+                "numFound": 169908,
+                "phrase": "star dictionary raise short industry",
+                "realTime": 0.003283,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:06.671004",
+                "numFound": 169908,
+                "phrase": "star dictionary raise short industry",
+                "realTime": 0.003379,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:06.790618",
+                "numFound": 123524,
+                "phrase": "bear stead consonant held danger",
+                "realTime": 0.042455,
+                "solrQTime": 36
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:06.897578",
+                "numFound": 123524,
+                "phrase": "bear stead consonant held danger",
+                "realTime": 0.003149,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:06.941767",
+                "numFound": 123524,
+                "phrase": "bear stead consonant held danger",
+                "realTime": 0.003072,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:06.975976",
+                "numFound": 123524,
+                "phrase": "bear stead consonant held danger",
+                "realTime": 0.003103,
+                "solrQTime": 0
+            }
+        ],
+        [
+            {
+                "datesStamp": "2019-03-07 17:50:07.010216",
+                "numFound": 1076775,
+                "phrase": "language slip joy mine large",
+                "realTime": 0.150547,
+                "solrQTime": 144
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:07.228014",
+                "numFound": 1076775,
+                "phrase": "language slip joy mine large",
+                "realTime": 0.003448,
+                "solrQTime": 0
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:07.289615",
+                "numFound": 1076775,
+                "phrase": "language slip joy mine large",
+                "realTime": 0.005808,
+                "solrQTime": 1
+            },
+            {
+                "datesStamp": "2019-03-07 17:50:07.353467",
+                "numFound": 1076775,
+                "phrase": "language slip joy mine large",
+                "realTime": 0.003308,
+                "solrQTime": 1
+            }
+        ]
+    ],
+    "numFound": {
+        "average": 259127.56666666668,
+        "max": 1076775,
+        "min": 38127
+    },
+    "summary": {
+        "environment": "PROD",
+        "environment uri": "http://compass-fedora-prod.fivecolleges.edu:8080/solr/collection1/",
+        "first (unique) time avg": 70.16666666666667,
+        "last (cached) time avg": 0.4666666666666667,
+        "numFound ave": 259127.56666666668,
+        "numFound max": 1076775,
+        "numFound min": 38127,
+        "test end time": "2019-03-07 17:50:07.416247",
+        "test start time": "2019-03-07 17:49:58.404186"
+    }
+}
