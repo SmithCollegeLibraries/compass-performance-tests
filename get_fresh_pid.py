@@ -49,33 +49,12 @@ drupal_protocol_host_port = serverConfig['drupal_protocol'] + "://" + serverConf
 drupal_object_path = serverConfig['drupal_object_path']
 drupal_end_point = drupal_protocol_host_port + drupal_object_path
 
-def loadQueryHistory(queryHistoryFile):
-    try:
-        with open(queryHistoryFile, 'r') as fp:
-            queryHistoryJson = json.load(fp)
-        # Convert all the date strings into real dates... D:
-        queryHistory = {}
-        for key,value in queryHistoryJson.items():
-            value = datetime.strptime(value,'%Y-%m-%d %H:%M:%S.%f')
-            queryHistory[key] = value
-    except FileNotFoundError:
-        logging.info("No query history file, starting a fresh dictionary")
-        queryHistory = {}
-    return queryHistory
-
-def recordQuery(queryHistory, queryHistoryFile, downloadUrl):
-    queryHistory[downloadUrl] = datetime.now()
-    with open(queryHistoryFile, 'w') as fp:
-        # Do this on every request in case something happens before we get to
-        # the end of the program
-        json.dump(queryHistory, fp, indent=4, sort_keys=True, default=str)
-
 def getFreshObjectUrl(queryHistory, pidList, drupal_end_point, max_age):
     """pidList is list of dictionaries containing fields called 'PID'"""
     objectPid = pidList[random.randint(0,len(pidList) - 1)]['PID']
     downloadUrl = drupal_end_point + "%s" % objectPid
     try:
-        dateStamp = queryHistory[downloadUrl]
+        dateStamp = queryHistory.state[downloadUrl]
         logging.debug("URL found in history with datestamp: %s" % dateStamp)
         objectUrlAge = datetime.now() - dateStamp
         if objectUrlAge > max_age:
@@ -85,14 +64,39 @@ def getFreshObjectUrl(queryHistory, pidList, drupal_end_point, max_age):
             logging.debug("Object URL age %s is younger than max_age %s" % (objectUrlAge, max_age))
             logging.debug("Try again! rerunning getFreshUrl()")
             try:
-                return getFreshObjectUrl(queryHistory, pidList, drupal_end_point)
+                return getFreshObjectUrl(queryHistory, pidList, drupal_end_point, max_age)
             except RecursionError:
                 logging.error("FAIL Exhausted available list of objects")
                 exit(1)
     except KeyError:
         # That URL is not even on the list so it's definitely fresh
         logging.debug("URL not even in history")
+        queryHistory.recordQuery(downloadUrl)
         return downloadUrl
+
+class QueryHistory:
+    def __init__(self, historyfile):
+        self.historyfile = historyfile
+        self.state = self._loadQueryHistory(historyfile)
+
+    def _loadQueryHistory(self, queryHistoryFile):
+        try:
+            with open(queryHistoryFile, 'r') as fp:
+                queryHistoryJson = json.load(fp)
+            # Convert all the date strings into real dates... D:
+            queryHistory = {}
+            for key,value in queryHistoryJson.items():
+                value = datetime.strptime(value,'%Y-%m-%d %H:%M:%S.%f')
+                queryHistory[key] = value
+        except FileNotFoundError:
+            logging.info("No query history file, starting a fresh dictionary")
+            queryHistory = {}
+        return queryHistory
+
+    def recordQuery(self, downloadUrl):
+        self.state[downloadUrl] = datetime.now()
+        with open(self.historyfile, 'w') as fp:
+            json.dump(self.state, fp, indent=4, sort_keys=True, default=str)
 
 def loadPidList(pidListFile):
     """Take json output from Solr and return just the 'docs' section, which is a
@@ -103,7 +107,6 @@ def loadPidList(pidListFile):
 
 if __name__ == '__main__':
     mylist = loadPidList(cliArguments.PIDLISTFILE)
-    queryHistory_mutable_state = loadQueryHistory(cliArguments.historyfile)
-    freshUrl = getFreshObjectUrl(queryHistory_mutable_state, mylist, drupal_end_point, MIN_OBJECT_URL_STALENESS)
-    recordQuery(queryHistory_mutable_state, cliArguments.historyfile, freshUrl)
+    queryHistory = QueryHistory(cliArguments.historyfile)
+    freshUrl = getFreshObjectUrl(queryHistory, mylist, drupal_end_point, MIN_OBJECT_URL_STALENESS)
     print(freshUrl)
