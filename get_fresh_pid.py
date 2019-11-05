@@ -21,34 +21,6 @@ MIN_OBJECT_URL_STALENESS = timedelta(hours=24)
 
 CONFIGFILE = "islandora.cfg"
 
-logging.getLogger("requests").setLevel(logging.WARNING)
-
-argparser = argparse.ArgumentParser(description=description)
-argparser.add_argument("PIDLISTFILE", help="List of PIDs to draw from. Standard Solr json output including PID field.")
-argparser.add_argument("SERVERCFG", default="PROD", help="Name of the server configuration section e.g. 'PROD' or 'STAGE'. Edit islandora.cfg to add a server configuration section.")
-argparser.add_argument("--historyfile", default="queryhistory.json", help="Name of file to record what queries were made when.")
-cliArguments = argparser.parse_args()
-
-section = cliArguments.SERVERCFG
-configData = configparser.ConfigParser()
-largeobjectslistFilename = 'largeobjectslist-%s.cache' % cliArguments.SERVERCFG
-
-try:
-    configData.read_file(open(CONFIGFILE), source=CONFIGFILE)
-except FileNotFoundError:
-    logging.error('No configuration file found. Configuration file required. Please make a config file called %s.' % CONFIGFILE)
-    exit(1)
-    
-try:
-    serverConfig = configData[section]
-except KeyError:
-    print("'%s' section not present in configuration file %s" % (section, CONFIGFILE))
-    exit(1)
-
-drupal_protocol_host_port = serverConfig['drupal_protocol'] + "://" + serverConfig['drupal_hostname']
-drupal_object_path = serverConfig['drupal_object_path']
-drupal_end_point = drupal_protocol_host_port + drupal_object_path
-
 def getFreshObjectUrl(queryHistory, pidList, drupal_end_point, max_age):
     """pidList is list of dictionaries containing fields called 'PID'"""
     objectPid = pidList[random.randint(0,len(pidList) - 1)]['PID']
@@ -106,6 +78,32 @@ def loadPidList(pidListFile):
     return pidListData['response']['docs']
 
 if __name__ == '__main__':
+    argparser = argparse.ArgumentParser(description=description)
+    argparser.add_argument("PIDLISTFILE", help="List of PIDs to draw from. Standard Solr json output including PID field.")
+    argparser.add_argument("SERVERCFG", default="PROD", help="Name of the server configuration section e.g. 'PROD' or 'STAGE'. Edit islandora.cfg to add a server configuration section.")
+    argparser.add_argument("--historyfile", default="queryhistory.json", help="Name of file to record what queries were made when.")
+    cliArguments = argparser.parse_args()
+
+    section = cliArguments.SERVERCFG
+    configData = configparser.ConfigParser()
+    largeobjectslistFilename = 'largeobjectslist-%s.cache' % cliArguments.SERVERCFG
+
+    try:
+        configData.read_file(open(CONFIGFILE), source=CONFIGFILE)
+    except FileNotFoundError:
+        logging.error('No configuration file found. Configuration file required. Please make a config file called %s.' % CONFIGFILE)
+        exit(1)
+        
+    try:
+        serverConfig = configData[section]
+    except KeyError:
+        print("'%s' section not present in configuration file %s" % (section, CONFIGFILE))
+        exit(1)
+
+    drupal_protocol_host_port = serverConfig['drupal_protocol'] + "://" + serverConfig['drupal_hostname']
+    drupal_object_path = serverConfig['drupal_object_path']
+    drupal_end_point = drupal_protocol_host_port + drupal_object_path
+
     mylist = loadPidList(cliArguments.PIDLISTFILE)
     queryHistory = QueryHistory(cliArguments.historyfile)
     freshUrl = getFreshObjectUrl(queryHistory, mylist, drupal_end_point, MIN_OBJECT_URL_STALENESS)
