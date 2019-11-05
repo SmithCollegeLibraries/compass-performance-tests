@@ -38,7 +38,20 @@ class Report:
         self.data.append(logEntry)
     def write(self, filename):
         with open(filename, 'w') as fp:
-            csvWriter = csv.DictWriter(fp, ['timeStamp', 'stageUrl', 'stageDuration', 'prodUrl', 'prodDuration', 'durationRatio'])
+            csvWriter = csv.DictWriter(fp, [
+                'timeStamp',
+                'stageUrl',
+                'stageDuration',
+                'prodUrl',
+                'prodDuration',
+                'durationRatio',
+                'stageXDrupalCache',
+                'stageCacheControl',
+                'prodXDrupalCache',
+                'prodCacheControl',
+                'stageHeaders',
+                'prodHeaders',
+            ])
             csvWriter.writeheader()
             csvWriter.writerows(self.data)
 
@@ -47,18 +60,41 @@ def queryTimer(url):
     requestStart = datetime.now()
     request = requests.get(url, allow_redirects=True)
     transferElapsedTime = datetime.now()-requestStart
-    return transferElapsedTime
+    return {'transferElapsedTime': transferElapsedTime, 'headers': request.headers}
 
 def runComparativeQueries(stageUrl, prodUrl):
     logEntry = {}
     logEntry['timeStamp'] = datetime.now()
-    stageDuration = queryTimer(stageUrl)
-    prodDuration = queryTimer(prodUrl)
+    stageQueryTimerReport = queryTimer(stageUrl)
+    stageDuration = stageQueryTimerReport['transferElapsedTime']
+    prodQueryTimerReport = queryTimer(prodUrl)
+    prodDuration = prodQueryTimerReport['transferElapsedTime']
+    logEntry['durationRatio'] = str(stageDuration / prodDuration)
+
     logEntry['stageUrl'] = stageUrl
     logEntry['stageDuration'] = str(stageDuration)
+    try:
+        logEntry['stageXDrupalCache'] = stageQueryTimerReport['headers']['X-Drupal-Cache']
+    except:
+        logEntry['stageXDrupalCache'] = ''
+    try:
+        logEntry['stageCacheControl'] = stageQueryTimerReport['headers']['Cache-Control']
+    except:
+        logEntry['stageCacheControl'] = ''
+    logEntry['stageHeaders'] = str(stageQueryTimerReport['headers'])
+
     logEntry['prodUrl'] = prodUrl
     logEntry['prodDuration'] = str(prodDuration)
-    logEntry['durationRatio'] = str(stageDuration / prodDuration)
+    try:
+        logEntry['prodXDrupalCache'] = prodQueryTimerReport['headers']['X-Drupal-Cache']
+    except:
+        logEntry['prodXDrupalCache'] = ''
+    try:
+        logEntry['prodCacheControl'] = prodQueryTimerReport['headers']['Cache-Control']
+    except:
+        logEntry['prodCacheControl'] = ''
+    logEntry['prodHeaders'] = str(prodQueryTimerReport['headers'])
+
     return logEntry
 
 if __name__ == "__main__":
