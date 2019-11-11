@@ -4,6 +4,7 @@ $ curl "http://compass-fedora-stage.fivecolleges.edu:8080/solr/collection1/selec
 
 $ python3 compare_prodVstage_object_page_query_times.py stagebooks-1572891400.json --historyfile book-history.json --multiple 300 --report-file output.csv
 
+If you use the --use-lighthouse option make sure that lighhouse is installed as a command line tool: https://developers.google.com/web/tools/lighthouse#cli
 """
 from get_fresh_pid import QueryHistory, getFreshObjectUrl, loadPidList
 import argparse
@@ -13,6 +14,8 @@ from datetime import timedelta
 from datetime import datetime
 import requests
 import csv
+import json
+import subprocess
 
 logging.getLogger("requests").setLevel(logging.WARNING)
 
@@ -24,8 +27,9 @@ argparser = argparse.ArgumentParser(description=description)
 argparser.add_argument("--dry-run", action='store_true', help="Don't do the query, just print the URLs and mark them as used")
 argparser.add_argument("PIDLISTFILE", help="List of PIDs to draw from. Standard Solr json output including PID field.")
 argparser.add_argument("--historyfile", default="queryhistory.json", help="Name of file to record what queries were made when.")
-argparser.add_argument("--multiple", default=1, type=int, help="Number of pairs of objects to run the test on")
+argparser.add_argument("--multiple", default=1, type=int, help="Number of pairs of objects to run the test on.")
 argparser.add_argument("--report-file", help="file to write report to")
+argparser.add_argument("--use-lighthouse", action='store_true', help="Launch lighthouse for additional statistics. (must be installed already as a cli tool)")
 
 cliArguments = argparser.parse_args()
 
@@ -38,7 +42,7 @@ class Report:
         self.data.append(logEntry)
     def write(self, filename):
         with open(filename, 'w') as fp:
-            csvWriter = csv.DictWriter(fp, [
+            reportFields = [
                 'timeStamp',
                 'stageUrl',
                 'stageDuration',
@@ -51,7 +55,20 @@ class Report:
                 'prodCacheControl',
                 'stageHeaders',
                 'prodHeaders',
-            ])
+            ]
+            lighthouseFields = [
+                'stage-interactive',
+                'stage-time_to_first_byte',
+                'stage-post_TTFB_time',
+                'prod-interactive',
+                'prod-time_to_first_byte',
+                'prod-post_TTFB_time',
+                'post_TTFB_ratio',
+            ]
+            if cliArguments.use_lighthouse is True:
+                reportFields.extend(lighthouseFields)
+
+            csvWriter = csv.DictWriter(fp, reportFields)
             csvWriter.writeheader()
             csvWriter.writerows(self.data)
 
@@ -60,7 +77,35 @@ def queryTimer(url):
     requestStart = datetime.now()
     request = requests.get(url, allow_redirects=True)
     transferElapsedTime = datetime.now()-requestStart
-    return {'transferElapsedTime': transferElapsedTime, 'headers': request.headers}
+
+    if cliArguments.use_lighthouse is True:
+        lighthouseCommand = 'lighthouse "%s" --only-categories=performance --output=json --emulated-form-factor=none --throttling-method=provided' % url
+        p = subprocess.Popen(lighthouseCommand, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        lighthouseData = json.load(p.stdout)
+
+    try:
+        interactive = lighthouseData['audits']['interactive']['numericValue']
+    except:
+        interactive = 0
+    try:
+        time_to_first_byte = lighthouseData['audits']['time-to-first-byte']['numericValue']
+    except:
+        time_to_first_byte = 0
+    post_TTFB_time = interactive - time_to_first_byte
+
+    report = {
+        'transferElapsedTime': transferElapsedTime,
+        'headers': request.headers,
+    }
+
+    if cliArguments.use_lighthouse is True:
+        report.update({
+            'post_TTFB_time': post_TTFB_time,
+            'interactive': interactive,
+            'time_to_first_byte': time_to_first_byte,
+        })
+    
+    return report
 
 def runComparativeQueries(stageUrl, prodUrl):
     logEntry = {}
@@ -83,6 +128,11 @@ def runComparativeQueries(stageUrl, prodUrl):
         logEntry['stageCacheControl'] = ''
     logEntry['stageHeaders'] = str(stageQueryTimerReport['headers'])
 
+    if cliArguments.use_lighthouse is True:
+        logEntry['stage-interactive'] = stageQueryTimerReport['interactive']
+        logEntry['stage-time_to_first_byte'] = stageQueryTimerReport['time_to_first_byte']
+        logEntry['stage-post_TTFB_time'] = stageQueryTimerReport['post_TTFB_time']
+
     logEntry['prodUrl'] = prodUrl
     logEntry['prodDuration'] = str(prodDuration)
     try:
@@ -94,6 +144,15 @@ def runComparativeQueries(stageUrl, prodUrl):
     except:
         logEntry['prodCacheControl'] = ''
     logEntry['prodHeaders'] = str(prodQueryTimerReport['headers'])
+
+    if cliArguments.use_lighthouse is True:
+        logEntry['prod-interactive'] = prodQueryTimerReport['interactive']
+        logEntry['prod-time_to_first_byte'] = prodQueryTimerReport['time_to_first_byte']
+        logEntry['prod-post_TTFB_time'] = prodQueryTimerReport['post_TTFB_time']
+        try:
+            logEntry['post_TTFB_ratio'] = str(stageQueryTimerReport['post_TTFB_time'] / prodQueryTimerReport['post_TTFB_time'])
+        except ZeroDivisionError:
+            logEntry['post_TTFB_ratio'] = 0
 
     return logEntry
 
