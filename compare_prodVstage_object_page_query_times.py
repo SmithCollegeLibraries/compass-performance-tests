@@ -81,7 +81,8 @@ def queryTimer(url):
     if cliArguments.use_lighthouse is True:
         lighthouseCommand = 'lighthouse "%s" --only-categories=performance --output=json --emulated-form-factor=none --throttling-method=provided' % url
         p = subprocess.Popen(lighthouseCommand, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        lighthouseData = json.load(p.stdout)
+        buffer = p.stdout.read()
+        lighthouseData = json.loads(buffer.decode('UTF-8'))
 
     try:
         interactive = lighthouseData['audits']['interactive']['numericValue']
