@@ -79,7 +79,7 @@ def queryTimer(url):
     transferElapsedTime = datetime.now()-requestStart
 
     if cliArguments.use_lighthouse is True:
-        lighthouseCommand = 'lighthouse "%s" --only-categories=performance --output=json --emulated-form-factor=none --throttling-method=provided' % url
+        lighthouseCommand = 'lighthouse "%s" --only-categories=performance --output=json --emulated-form-factor=none --throttling-method=provided --chrome-flags="--headless"' % url
         p = subprocess.Popen(lighthouseCommand, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         buffer = p.stdout.read()
         lighthouseData = json.loads(buffer.decode('UTF-8'))
