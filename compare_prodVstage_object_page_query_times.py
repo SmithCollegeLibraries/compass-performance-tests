@@ -75,14 +75,23 @@ class Report:
 def queryTimer(url):
     queryHistory.recordQuery(url)
     requestStart = datetime.now()
-    request = requests.get(url, allow_redirects=True)
-    transferElapsedTime = datetime.now()-requestStart
+    try:
+        request = requests.get(url, allow_redirects=True)
+        transferElapsedTime = datetime.now()-requestStart
+    except Exception as e:
+        logging.error(e)
+        transferElapsedTime = 0
 
     if cliArguments.use_lighthouse is True:
         lighthouseCommand = 'lighthouse "%s" --only-categories=performance --output=json --emulated-form-factor=none --throttling-method=provided --chrome-flags="--headless"' % url
         p = subprocess.Popen(lighthouseCommand, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         buffer = p.stdout.read()
-        lighthouseData = json.loads(buffer.decode('UTF-8'))
+        try:
+            lighthouseData = json.loads(buffer.decode('UTF-8'))
+        except Exception as e:
+            logging.error(e)
+            # If json can't be parsed just make an empty data structure
+            lighthouseData = {}
 
     try:
         interactive = lighthouseData['audits']['interactive']['numericValue']
