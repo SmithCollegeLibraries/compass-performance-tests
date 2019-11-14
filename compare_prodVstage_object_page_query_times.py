@@ -23,18 +23,6 @@ logging.getLogger("requests").setLevel(logging.WARNING)
 # c.f. https://docs.python.org/3/library/datetime.html#timedelta-objects
 MIN_OBJECT_URL_STALENESS = timedelta(hours=24)
 
-argparser = argparse.ArgumentParser(description=description)
-argparser.add_argument("--dry-run", action='store_true', help="Don't do the query, just print the URLs and mark them as used")
-argparser.add_argument("PIDLISTFILE", help="List of PIDs to draw from. Standard Solr json output including PID field.")
-argparser.add_argument("--historyfile", default="queryhistory.json", help="Name of file to record what queries were made when.")
-argparser.add_argument("--multiple", default=1, type=int, help="Number of pairs of objects to run the test on.")
-argparser.add_argument("--report-file", help="file to write report to")
-argparser.add_argument("--use-lighthouse", action='store_true', help="Launch lighthouse for additional statistics. (must be installed already as a cli tool)")
-
-cliArguments = argparser.parse_args()
-
-configData = configparser.ConfigParser()
-
 class Report:
     def __init__(self):
         self.data = []
@@ -72,26 +60,16 @@ class Report:
             csvWriter.writeheader()
             csvWriter.writerows(self.data)
 
-def queryTimer(url):
-    queryHistory.recordQuery(url)
-    requestStart = datetime.now()
+def lighthouse(url):
+    lighthouseCommand = 'lighthouse "%s" --only-categories=performance --output=json --emulated-form-factor=none --throttling-method=provided --chrome-flags="--headless"' % url
+    p = subprocess.Popen(lighthouseCommand, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    buffer = p.stdout.read()
     try:
-        request = requests.get(url, allow_redirects=True)
-        transferElapsedTime = datetime.now()-requestStart
+        lighthouseData = json.loads(buffer.decode('UTF-8'))
     except Exception as e:
         logging.error(e)
-        transferElapsedTime = 0
-
-    if cliArguments.use_lighthouse is True:
-        lighthouseCommand = 'lighthouse "%s" --only-categories=performance --output=json --emulated-form-factor=none --throttling-method=provided --chrome-flags="--headless"' % url
-        p = subprocess.Popen(lighthouseCommand, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        buffer = p.stdout.read()
-        try:
-            lighthouseData = json.loads(buffer.decode('UTF-8'))
-        except Exception as e:
-            logging.error(e)
-            # If json can't be parsed just make an empty data structure
-            lighthouseData = {}
+        # If json can't be parsed just make an empty data structure
+        lighthouseData = {}
 
     try:
         interactive = lighthouseData['audits']['interactive']['numericValue']
@@ -104,16 +82,26 @@ def queryTimer(url):
     post_TTFB_time = interactive - time_to_first_byte
 
     report = {
+        'post_TTFB_time': post_TTFB_time,
+        'interactive': interactive,
+        'time_to_first_byte': time_to_first_byte,
+    }
+
+    return report
+
+def queryTimer(url):
+    requestStart = datetime.now()
+    try:
+        request = requests.get(url, allow_redirects=True)
+        transferElapsedTime = datetime.now()-requestStart
+    except Exception as e:
+        logging.error(e)
+        transferElapsedTime = 0
+
+    report = {
         'transferElapsedTime': transferElapsedTime,
         'headers': request.headers,
     }
-
-    if cliArguments.use_lighthouse is True:
-        report.update({
-            'post_TTFB_time': post_TTFB_time,
-            'interactive': interactive,
-            'time_to_first_byte': time_to_first_byte,
-        })
     
     return report
 
@@ -138,11 +126,6 @@ def runComparativeQueries(stageUrl, prodUrl):
         logEntry['stageCacheControl'] = ''
     logEntry['stageHeaders'] = str(stageQueryTimerReport['headers'])
 
-    if cliArguments.use_lighthouse is True:
-        logEntry['stage-interactive'] = stageQueryTimerReport['interactive']
-        logEntry['stage-time_to_first_byte'] = stageQueryTimerReport['time_to_first_byte']
-        logEntry['stage-post_TTFB_time'] = stageQueryTimerReport['post_TTFB_time']
-
     logEntry['prodUrl'] = prodUrl
     logEntry['prodDuration'] = str(prodDuration)
     try:
@@ -156,17 +139,37 @@ def runComparativeQueries(stageUrl, prodUrl):
     logEntry['prodHeaders'] = str(prodQueryTimerReport['headers'])
 
     if cliArguments.use_lighthouse is True:
-        logEntry['prod-interactive'] = prodQueryTimerReport['interactive']
-        logEntry['prod-time_to_first_byte'] = prodQueryTimerReport['time_to_first_byte']
-        logEntry['prod-post_TTFB_time'] = prodQueryTimerReport['post_TTFB_time']
+        stageLighthouseReport = lighthouse(stageUrl)
+        prodLighthouseReport = lighthouse(prodUrl)
+
+        logEntry['stage-interactive'] = stageLighthouseReport['interactive']
+        logEntry['stage-time_to_first_byte'] = stageLighthouseReport['time_to_first_byte']
+        logEntry['stage-post_TTFB_time'] = stageLighthouseReport['post_TTFB_time']
+
+        logEntry['prod-interactive'] = prodLighthouseReport['interactive']
+        logEntry['prod-time_to_first_byte'] = prodLighthouseReport['time_to_first_byte']
+        logEntry['prod-post_TTFB_time'] = prodLighthouseReport['post_TTFB_time']
+
         try:
-            logEntry['post_TTFB_ratio'] = str(stageQueryTimerReport['post_TTFB_time'] / prodQueryTimerReport['post_TTFB_time'])
+            logEntry['post_TTFB_ratio'] = str(stageLighthouseReport['post_TTFB_time'] / prodLighthouseReport['post_TTFB_time'])
         except ZeroDivisionError:
             logEntry['post_TTFB_ratio'] = 0
 
     return logEntry
 
 if __name__ == "__main__":
+    argparser = argparse.ArgumentParser(description=description)
+    argparser.add_argument("--dry-run", action='store_true', help="Don't do the query, just print the URLs and mark them as used")
+    argparser.add_argument("PIDLISTFILE", help="List of PIDs to draw from. Standard Solr json output including PID field.")
+    argparser.add_argument("--historyfile", default="queryhistory.json", help="Name of file to record what queries were made when.")
+    argparser.add_argument("--multiple", default=1, type=int, help="Number of pairs of objects to run the test on.")
+    argparser.add_argument("--report-file", help="file to write report to")
+    argparser.add_argument("--use-lighthouse", action='store_true', help="Launch lighthouse for additional statistics. (must be installed already as a cli tool)")
+
+    cliArguments = argparser.parse_args()
+
+    configData = configparser.ConfigParser()
+
     report = Report()
     mylist = loadPidList(cliArguments.PIDLISTFILE)
     queryHistory = QueryHistory(cliArguments.historyfile)
@@ -177,6 +180,8 @@ if __name__ == "__main__":
         prodUrl = "https://compass.fivecolleges.edu" + path
 
         if not cliArguments.dry_run:
+            queryHistory.recordQuery(stageUrl)
+            queryHistory.recordQuery(prodUrl)
             logEntry = runComparativeQueries(stageUrl, prodUrl)
             report.log(logEntry)
             report.write(cliArguments.report_file)
