@@ -45,11 +45,13 @@ class Report:
                 'prodHeaders',
             ]
             lighthouseFields = [
-                'stage-interactive',
                 'stage-time_to_first_byte',
+                'stage-first_meaningful_paint',
+                'stage-interactive',
                 'stage-post_TTFB_time',
-                'prod-interactive',
                 'prod-time_to_first_byte',
+                'prod-first_meaningful_paint',
+                'prod-interactive',
                 'prod-post_TTFB_time',
                 'post_TTFB_ratio',
             ]
@@ -60,7 +62,7 @@ class Report:
             csvWriter.writeheader()
             csvWriter.writerows(self.data)
 
-def lighthouse(url):
+def runLighthouse(url):
     lighthouseCommand = 'lighthouse "%s" --only-categories=performance --output=json --emulated-form-factor=none --throttling-method=provided --chrome-flags="--headless"' % url
     p = subprocess.Popen(lighthouseCommand, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     buffer = p.stdout.read()
@@ -71,6 +73,10 @@ def lighthouse(url):
         # If json can't be parsed just make an empty data structure
         lighthouseData = {}
 
+    try:
+        first_meaningful_paint = lighthouseData['audits']['first-meaningful-paint']['numericValue']
+    except:
+        first_meaningful_paint = 0
     try:
         interactive = lighthouseData['audits']['interactive']['numericValue']
     except:
@@ -83,6 +89,7 @@ def lighthouse(url):
 
     report = {
         'post_TTFB_time': post_TTFB_time,
+        'first_meaningful_paint': first_meaningful_paint,
         'interactive': interactive,
         'time_to_first_byte': time_to_first_byte,
     }
@@ -139,15 +146,17 @@ def runComparativeQueries(stageUrl, prodUrl):
     logEntry['prodHeaders'] = str(prodQueryTimerReport['headers'])
 
     if cliArguments.use_lighthouse is True:
-        stageLighthouseReport = lighthouse(stageUrl)
-        prodLighthouseReport = lighthouse(prodUrl)
+        stageLighthouseReport = runLighthouse(stageUrl)
+        prodLighthouseReport = runLighthouse(prodUrl)
 
-        logEntry['stage-interactive'] = stageLighthouseReport['interactive']
         logEntry['stage-time_to_first_byte'] = stageLighthouseReport['time_to_first_byte']
+        logEntry['stage-first_meaningful_paint'] = stageLighthouseReport['first_meaningful_paint']
+        logEntry['stage-interactive'] = stageLighthouseReport['interactive']
         logEntry['stage-post_TTFB_time'] = stageLighthouseReport['post_TTFB_time']
 
-        logEntry['prod-interactive'] = prodLighthouseReport['interactive']
         logEntry['prod-time_to_first_byte'] = prodLighthouseReport['time_to_first_byte']
+        logEntry['prod-first_meaningful_paint'] = prodLighthouseReport['first_meaningful_paint']
+        logEntry['prod-interactive'] = prodLighthouseReport['interactive']
         logEntry['prod-post_TTFB_time'] = prodLighthouseReport['post_TTFB_time']
 
         try:
